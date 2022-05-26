@@ -10,6 +10,7 @@ import LinkedInIcon from '../assets/logos/linkedin-in.svg'
 import TwitterIcon from '../assets/logos/twitter.svg'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import SuruResume from '../assets/logos/resume/suru.pdf'
+import GoBusyLogo from '../assets/logos/gobylogo.png'
 
 export default function Username(props) {
 
@@ -46,8 +47,9 @@ export default function Username(props) {
             padding: 10
         },
         resumeBtn: {
-            height:200,
-            width:80
+            width: '80%',
+            height: 55,
+            backgroundColor: '#3ECC66'
         }
     }
 
@@ -237,19 +239,15 @@ export default function Username(props) {
                 }) 
                 }
             </div>
-            <div>
-                <a  style={styles.resumeBtn} href={SuruResume} download>
+            <div className='resumeBtnBox'>
+                <a className='resumeBtn' href={SuruResume} download>
                     Download Resume
                 </a>
             </div>
-            {console.log('userName - ',data.userBio.name)}
-            <p style={{
-                textAlign:'center',
-                color:'#007228',
-                fontWeight: '600'
-            }}>
-                goBy.in 
-            </p>
+            <img
+            src={GoBusyLogo}
+            className='gobyLogo'
+            />
         </div>
     </div>
   )
