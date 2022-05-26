@@ -8,6 +8,7 @@ import DribbleIcon from '../assets/logos/dribbble.svg'
 import BehanceIcon from '../assets/logos/behance.svg'
 import LinkedInIcon from '../assets/logos/linkedin-in.svg'
 import TwitterIcon from '../assets/logos/twitter.svg'
+import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 
 export default function Username(props) {
 
@@ -116,14 +117,15 @@ export default function Username(props) {
                 {data.userLinks && data.userLinks.map((item, index) => {
                     if(item.title === 'Portfolio')
                     return(
-                        <div style={styles.folderFormat}>
+                        <div>
+                             <div style={styles.folderFormat}>
                             <h3 style={{
                                                 color:'#FFFFFF',
                                                 marginLeft: 20
                                             }}>
                                {item.title}
                             </h3>
-                            <div style={{
+                            <ScrollMenu style={{
                                 backgroundColor: '#848484',
                                 borderRadius: 8,
                                 marginBottom: 15
@@ -150,8 +152,10 @@ export default function Username(props) {
                                 }) 
 
                                 }
-                            </div>    
-                        </div>    
+                            </ScrollMenu>    
+                        </div>   
+                            </div>
+                        
                     )
                     if(item.title === 'Education')
                     return(
@@ -162,7 +166,7 @@ export default function Username(props) {
                                     }}>
                                {item.title}
                             </h3>
-                            <div style={{
+                            <ScrollMenu style={{
                                                 marginLeft: 20,
                                                 marginBottom:25,
 
@@ -190,7 +194,7 @@ export default function Username(props) {
                                 }) 
 
                                 }
-                            </div>    
+                            </ScrollMenu>    
                         </div>    
                     )
                     if(item.title === 'Certifications')
@@ -200,7 +204,7 @@ export default function Username(props) {
                                 {console.log('item ',item)}
                                Title: {item.title}
                             </h3>
-                            <div>
+                            <ScrollMenu>
                                 {item.links.map((lin, index) => {
                                     return(
                                         <div>
@@ -222,7 +226,7 @@ export default function Username(props) {
                                 }) 
 
                                 }
-                            </div>    
+                            </ScrollMenu>    
                         </div>    
                     )
                 }) 
