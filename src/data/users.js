@@ -137,14 +137,14 @@ export const userData = [{
             links: [{
                     courseName: "Full Stack Pro Developer",
                     yoc: "2021",
-                    certificateLink: "https://rbsvirundhagam.in/",
-                    rateYourSkill: "*****"
+                    certificateLink: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/rn.png?alt=media&token=4c52250c-4c80-42f5-b010-b261d2fe62bc",
+                    rateYourSkill: "4.5"
                 },
                 {
-                    courseName: "Proficiancy with Quantum Computers",
+                    courseName: "MERN Developer",
                     yoc: "2020",
-                    certificateLink: "https://rbsvirundhagam.in/",
-                    rateYourSkill: "*****"
+                    certificateLink: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/mern.png?alt=media&token=065df719-0354-4e1e-8b70-7dede19b925a",
+                    rateYourSkill: "4.8"
                 }
             ],
         },
