@@ -11,6 +11,8 @@ import TwitterIcon from '../assets/logos/twitter.svg'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import SuruResume from '../assets/logos/resume/suru.pdf'
 import GoBusyLogo from '../assets/logos/gobylogo.png'
+import { Link } from 'react-router-dom';
+import { fontSize } from '@mui/system';
 
 export default function Username(props) {
 
@@ -38,8 +40,6 @@ export default function Username(props) {
         },
         folderTxt: {
             fontSize: 18,
-            marginLeft: 15,
-            marginTop: 15
         },
         folderStructure: {
             padding: 10
@@ -129,7 +129,8 @@ export default function Username(props) {
                              <div style={styles.folderFormat}>
                             <h3 style={{
                                                 
-                                                marginLeft: 20
+                                                marginLeft: 20,
+                                                fontSize: "23px"
                                             }}>
                                {item.title}
                             </h3>
@@ -141,20 +142,23 @@ export default function Username(props) {
                                 {item.links.map((lin, index) => {
                                     return(
                                         <div className='card--menu'>
-                                            <div style={styles.folderStructure}>
-                                                <p style={styles.folderTxt}>
+                                            <div>
+                                                <img src={lin.image} />
+                                            </div>
+                                            <div style={{}} >
+                                                <p style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}} >
                                                 {lin.heading}
                                                 </p>
                                             </div>    
-                                            <p style={styles.folderTxt}>
+                                            <p style={{fontSize:"15px", textAlign:"justify", textJustify:"inter-word"}}>
                                             {lin.description}
                                             </p>
-                                            <p style={styles.folderTxt}>
-                                            {lin.url}
-                                            </p>
-                                            <p style={styles.folderTxt}>
-                                            {lin.image}
-                                            </p>
+                                            
+                                            <button onClick={() => window.open(lin.url, "_blank")} className='btn--dis'>
+                                                DISCOVER
+                                            </button>
+                                            
+                                            
                                         </div>
                                     )
                                 }) 
@@ -170,7 +174,8 @@ export default function Username(props) {
                         <div style={styles.folderFormat}>
                             <h3 style={{
                                                 
-                                                marginLeft: 20
+                                                marginLeft: 20,
+                                                fontSize: "23px"
                                     }}>
                                {item.title}
                             </h3>
@@ -182,20 +187,21 @@ export default function Username(props) {
                                 {item.links.map((lin, index) => {
                                     return(
                                         <div className='card--menu'>
-                                            <p style={{
-                                                color:'#FFFFFF'
-                                            }}>
+                                            <p 
+                                                 style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
+                                            >
                                             {lin.institutionName}
                                             </p>
-                                            <p>
+                                            <p  style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
                                             {lin.year}
                                             </p>
-                                            <p>
-                                            {lin.institutionurl}
-                                            </p>
-                                            <p>
+                                            
+                                            <p  style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
                                             {lin.grade}
                                             </p>
+                                            <button onClick={() => window.open(lin.institutionurl, "_blank")} className='btn--dis'>
+                                                DISCOVER
+                                            </button>
                                             
                                         </div>
                                     )
@@ -208,7 +214,7 @@ export default function Username(props) {
                     if(item.title === 'Certifications')
                     return(
                         <div style={styles.folderFormat}>
-                            <h3>
+                            <h3 style={{marginLeft:"20px", fontSize:"23px"}}>
                                 {console.log('item ',item)}
                                Title: {item.title}
                             </h3>
@@ -216,20 +222,43 @@ export default function Username(props) {
                                 {item.links.map((lin, index) => {
                                     return(
                                         <div className='card--menu'>
-                                            <p>
-                                            {lin.courseName}
-                                            </p>
-                                            <p>
+                                            <div>
+                                                <img className='cert--img' src={lin.certificateLink} />
+                                            </div>
+                                            <div style={{}} >
+                                                <p style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}} >
+                                                {lin.courseName}
+                                                </p>
+                                            </div>    
+                                            <p style={{fontSize:"15px", textAlign:"center"}}>
                                             {lin.yoc}
                                             </p>
-                                            <p>
-                                            {lin.certificateLink}
-                                            </p>
-                                            <p>
+                                            <p style={{fontSize:"15px", textAlign:"center"}}>
                                             {lin.rateYourSkill}
                                             </p>
                                             
+                                        
+                                            
+                                            
                                         </div>
+                                        // <div className='card--menu'>
+                                        //     <div>
+                                        //         <img  />
+                                        //     {lin.certificateLink}
+                                        //     </div>
+                                            
+                                        //     <p style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}>
+                                        //     {lin.courseName}
+                                        //     </p>
+                                        //     <p style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
+                                        //     {lin.yoc}
+                                        //     </p>
+                                            
+                                        //     <p>
+                                        //     {lin.rateYourSkill}
+                                        //     </p>
+                                            
+                                        // </div>
                                     )
                                 }) 
 
