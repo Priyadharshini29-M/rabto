@@ -1,5 +1,8 @@
 import React from 'react'
 import './username.css'
+import LogoIcon from '../assets/logos/verified.svg'
+import { Box } from '@mui/material';
+
 
 export default function Username(props) {
 
@@ -11,14 +14,13 @@ export default function Username(props) {
         mainLayout: {
             width:'100%',
             height:'100%',
-            backgroundColor:'#F4F4F4'
+            backgroundColor:'#FFFFFF'
         },
         textStruct: {
             textAlign: 'center',
-            color:'#162449'
+            color:'#162449',
         },
         folderStruct: {
-            margin: 7,
             backgroundColor: '#CFCFCF',
             borderRadius:8,
             padding:5
@@ -45,24 +47,68 @@ export default function Username(props) {
         }}>
             <img
                 src={data.userBio.profile}
-                className='imgBox'
+                className='imgBox userprofileImg'
+                sx={{ boxShadow: 3 }}
             />
-            <h2 style={styles.textStruct} className='usernameTxt'>
-            {data.userBio.name}
-            </h2>
+         
+            <div className='usernameTxtBox'>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'row'
+        }}
+        >
+        <h2 style={styles.textStruct} className='usernameTxt'>
+        {data.userBio.name}
+        </h2>
+        <img
+        style={{
+            height:23,
+            width:25,
+            marginTop: 30,
+            marginLeft: 15.5
+        }}
+        src={LogoIcon}
+        />
+     
+      </Box>
+    
+      </div>
             {/* <h3 style={styles.textStruct}>
                 @{data.userBio.userName}
             </h3> */}
-            <h3 style={styles.textStruct} className='userbioTxt'>
+            <h3 className='userbioTxt usernameBioTxt'>
             {data.userBio.bio}
             </h3>
-            <h3 style={styles.textStruct}>
+            <div style={{ width: '100%' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'nowrap',
+          p: 1,
+          m: 1,
+          bgcolor: 'background.paper',
+          maxWidth: 300,
+          borderRadius: 1,
+        }}
+      >
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <p>Item 3</p>
+        <p>Item 4</p>
+        <p>Item 5</p>
+        <p>Item 6</p>
+      </Box>
+      </div>
+            {/* <h3 style={styles.textStruct}>
             {data.userBio.email}
             </h3>
             <h3 style={styles.textStruct}>
             {data.userBio.age}
-            </h3>
+            </h3> */}
+            <div>
 
+            </div>
             <div style={styles.folderStruct}>
                 {data.userLinks && data.userLinks.map((item, index) => {
                     if(item.title === 'Portfolio')
