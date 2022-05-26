@@ -43,5 +43,9 @@
 
 .usernameSocialIcon {
     margin: 5px;
-    margin-left: 10px;
+    margin-left: 18px;
+}
+
+.usernameSocialIconBox {
+    text-align: center;
 }

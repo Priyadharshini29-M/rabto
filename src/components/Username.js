@@ -87,22 +87,20 @@ export default function Username(props) {
             </h3>
             <div style={{ width: '100%' }}>
       <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'nowrap',
-          p: 1,
-          m: 1,
-          bgcolor: 'background.paper',
-          maxWidth: 300,
-          borderRadius: 1,
-        }}
+        // sx={{
+        //   display: 'flex',
+        //   flexWrap: 'nowrap',
+        //   bgcolor: 'background.paper',
+        //   borderRadius: 1,
+        // }}
+        className='usernameSocialIconBox'
       >
-        <img src={InstagramIcon} className='usernameSocialIcon'/>
-        <img src={FaceBookIcon} className='usernameSocialIcon'/>
-        <img src={DribbleIcon} className='usernameSocialIcon'/>
-        <img src={BehanceIcon} className='usernameSocialIcon'/>
-        <img src={LinkedInIcon} className='usernameSocialIcon'/>
-        <img src={TwitterIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.behance, "_blank")} src={BehanceIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.linkedin, "_blank")} src={LinkedInIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='usernameSocialIcon'/>
       </Box>
       </div>
             {/* <h3 style={styles.textStruct}>

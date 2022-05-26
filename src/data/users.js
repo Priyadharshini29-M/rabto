@@ -84,12 +84,12 @@ export const userData = [{
         resumeurl: "www.google.com",
         profile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format",
         links: {
-            instagram: "instagram/varun_ft",
-            fb: "facebook/varun",
-            dribble: "dribble/varun_ft",
-            behance: "behance/varun",
-            linkedin: "linkedin/varun_ft",
-            twitter: "twitter/varun"
+            instagram: "https://www.instagram.com/thedot_tech/",
+            fb: "https://www.facebook.com/profile.php?id=100078201942993",
+            dribble: "https://dribbble.com/surintherraja",
+            behance: "https://www.behance.net/warrenpeaceweb",
+            linkedin: "https://www.linkedin.com/in/surinther-raja-s-7370b1125/",
+            twitter: "https://twitter.com/theDot_tech"
         },
     },
     userLinks: [{
