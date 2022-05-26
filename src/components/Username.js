@@ -9,6 +9,7 @@ import BehanceIcon from '../assets/logos/behance.svg'
 import LinkedInIcon from '../assets/logos/linkedin-in.svg'
 import TwitterIcon from '../assets/logos/twitter.svg'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import SuruResume from '../assets/logos/resume/suru.pdf'
 
 export default function Username(props) {
 
@@ -43,6 +44,10 @@ export default function Username(props) {
         },
         folderStructure: {
             padding: 10
+        },
+        resumeBtn: {
+            height:200,
+            width:80
         }
     }
 
@@ -231,6 +236,11 @@ export default function Username(props) {
                     )
                 }) 
                 }
+            </div>
+            <div>
+                <a  style={styles.resumeBtn} href={SuruResume} download>
+                    Download Resume
+                </a>
             </div>
             {console.log('userName - ',data.userBio.name)}
             <p style={{
