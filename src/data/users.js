@@ -82,14 +82,14 @@ export const userData = [{
         email: "testtheDot@gmail.com",
         age: "21",
         resumeurl: "www.google.com",
-        profile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format",
+        profile: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/WhatsApp%20Image%202022-05-26%20at%209.53.57%20PM.jpeg?alt=media&token=cd33be12-e1ef-4f12-9a8b-dc839744be60",
         links: {
-            instagram: "instagram/varun_ft",
-            fb: "facebook/varun",
-            dribble: "dribble/varun_ft",
-            behance: "behance/varun",
-            linkedin: "linkedin/varun_ft",
-            twitter: "twitter/varun"
+            instagram: "https://www.instagram.com/thedot_tech/",
+            fb: "https://www.facebook.com/profile.php?id=100078201942993",
+            dribble: "https://dribbble.com/surintherraja",
+            behance: "https://www.behance.net/warrenpeaceweb",
+            linkedin: "https://www.linkedin.com/in/surinther-raja-s-7370b1125/",
+            twitter: "https://twitter.com/theDot_tech"
         },
     },
     userLinks: [{

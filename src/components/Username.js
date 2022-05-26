@@ -8,6 +8,7 @@ import DribbleIcon from '../assets/logos/dribbble.svg'
 import BehanceIcon from '../assets/logos/behance.svg'
 import LinkedInIcon from '../assets/logos/linkedin-in.svg'
 import TwitterIcon from '../assets/logos/twitter.svg'
+import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 
 export default function Username(props) {
 
@@ -87,22 +88,20 @@ export default function Username(props) {
             </h3>
             <div style={{ width: '100%' }}>
       <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'nowrap',
-          p: 1,
-          m: 1,
-          bgcolor: 'background.paper',
-          maxWidth: 300,
-          borderRadius: 1,
-        }}
+        // sx={{
+        //   display: 'flex',
+        //   flexWrap: 'nowrap',
+        //   bgcolor: 'background.paper',
+        //   borderRadius: 1,
+        // }}
+        className='usernameSocialIconBox'
       >
-        <img src={InstagramIcon} className='usernameSocialIcon'/>
-        <img src={FaceBookIcon} className='usernameSocialIcon'/>
-        <img src={DribbleIcon} className='usernameSocialIcon'/>
-        <img src={BehanceIcon} className='usernameSocialIcon'/>
-        <img src={LinkedInIcon} className='usernameSocialIcon'/>
-        <img src={TwitterIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.behance, "_blank")} src={BehanceIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.linkedin, "_blank")} src={LinkedInIcon} className='usernameSocialIcon'/>
+        <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='usernameSocialIcon'/>
       </Box>
       </div>
             {/* <h3 style={styles.textStruct}>
@@ -118,14 +117,15 @@ export default function Username(props) {
                 {data.userLinks && data.userLinks.map((item, index) => {
                     if(item.title === 'Portfolio')
                     return(
-                        <div style={styles.folderFormat}>
+                        <div>
+                             <div style={styles.folderFormat}>
                             <h3 style={{
                                                 color:'#FFFFFF',
                                                 marginLeft: 20
                                             }}>
                                {item.title}
                             </h3>
-                            <div style={{
+                            <ScrollMenu style={{
                                 backgroundColor: '#848484',
                                 borderRadius: 8,
                                 marginBottom: 15
@@ -152,8 +152,10 @@ export default function Username(props) {
                                 }) 
 
                                 }
-                            </div>    
-                        </div>    
+                            </ScrollMenu>    
+                        </div>   
+                            </div>
+                        
                     )
                     if(item.title === 'Education')
                     return(
@@ -164,7 +166,7 @@ export default function Username(props) {
                                     }}>
                                {item.title}
                             </h3>
-                            <div style={{
+                            <ScrollMenu style={{
                                                 marginLeft: 20,
                                                 marginBottom:25,
 
@@ -192,7 +194,7 @@ export default function Username(props) {
                                 }) 
 
                                 }
-                            </div>    
+                            </ScrollMenu>    
                         </div>    
                     )
                     if(item.title === 'Certifications')
@@ -202,7 +204,7 @@ export default function Username(props) {
                                 {console.log('item ',item)}
                                Title: {item.title}
                             </h3>
-                            <div>
+                            <ScrollMenu>
                                 {item.links.map((lin, index) => {
                                     return(
                                         <div>
@@ -224,7 +226,7 @@ export default function Username(props) {
                                 }) 
 
                                 }
-                            </div>    
+                            </ScrollMenu>    
                         </div>    
                     )
                 }) 
