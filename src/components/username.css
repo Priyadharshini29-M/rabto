@@ -7,8 +7,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    padding-top: 1rem;
 }
+
+
 
 .usernameTxt {
     font-family: 'Khula', sans-serif;
@@ -24,8 +26,16 @@
     text-align: center;
 }
 
+.card--menu{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 30px;
+    
+}
+
 .userprofileImg {
-    filter: drop-shadow(0 0 0.50rem rgb(45, 45, 45));
+    filter: drop-shadow(0 0 0.75rem rgb(45, 45, 45));
 }
 
 .usernameTxtBox {

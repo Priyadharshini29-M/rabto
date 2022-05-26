@@ -24,10 +24,9 @@ export default function Username(props) {
         },
         textStruct: {
             textAlign: 'center',
-            color:'#162449',
         },
         folderStruct: {
-            backgroundColor: '#CFCFCF',
+            backgroundColor: '#fff',
             borderRadius:8,
             padding:5
         },
@@ -36,7 +35,6 @@ export default function Username(props) {
             marginTop: 20
         },
         folderTxt: {
-            color:'#FFFFFF',
             fontSize: 18,
             marginLeft: 15,
             marginTop: 15
@@ -49,12 +47,14 @@ export default function Username(props) {
   return (
     <div style={styles.mainLayout}>  
         <div style={{
-            padding: 20
+            
+            
         }}>
+            <div style={{backgroundColor:"#F4F4F4"}}>
             <img
                 src={data.userBio.profile}
                 className='imgBox userprofileImg'
-                sx={{ boxShadow: 3 }}
+                
             />
          
             <div className='usernameTxtBox'>
@@ -104,6 +104,7 @@ export default function Username(props) {
         <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='usernameSocialIcon'/>
       </Box>
       </div>
+      </div>
             {/* <h3 style={styles.textStruct}>
             {data.userBio.email}
             </h3>
@@ -120,7 +121,7 @@ export default function Username(props) {
                         <div>
                              <div style={styles.folderFormat}>
                             <h3 style={{
-                                                color:'#FFFFFF',
+                                                
                                                 marginLeft: 20
                                             }}>
                                {item.title}
@@ -132,7 +133,7 @@ export default function Username(props) {
                             }}>
                                 {item.links.map((lin, index) => {
                                     return(
-                                        <div>
+                                        <div className='card--menu'>
                                             <div style={styles.folderStructure}>
                                                 <p style={styles.folderTxt}>
                                                 {lin.heading}
@@ -161,19 +162,19 @@ export default function Username(props) {
                     return(
                         <div style={styles.folderFormat}>
                             <h3 style={{
-                                                color:'#FFFFFF',
+                                                
                                                 marginLeft: 20
                                     }}>
                                {item.title}
                             </h3>
                             <ScrollMenu style={{
-                                                marginLeft: 20,
-                                                marginBottom:25,
+                                                marginTop: 20,
+                                                marginBottom:45,
 
                                     }}>
                                 {item.links.map((lin, index) => {
                                     return(
-                                        <div>
+                                        <div className='card--menu'>
                                             <p style={{
                                                 color:'#FFFFFF'
                                             }}>
@@ -207,7 +208,7 @@ export default function Username(props) {
                             <ScrollMenu>
                                 {item.links.map((lin, index) => {
                                     return(
-                                        <div>
+                                        <div className='card--menu'>
                                             <p>
                                             {lin.courseName}
                                             </p>
