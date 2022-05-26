@@ -2,7 +2,12 @@ import React from 'react'
 import './username.css'
 import LogoIcon from '../assets/logos/verified.svg'
 import { Box } from '@mui/material';
-
+import InstagramIcon from '../assets/logos/instagram.svg'
+import FaceBookIcon from '../assets/logos/facebook.svg'
+import DribbleIcon from '../assets/logos/dribbble.svg'
+import BehanceIcon from '../assets/logos/behance.svg'
+import LinkedInIcon from '../assets/logos/linkedin-in.svg'
+import TwitterIcon from '../assets/logos/twitter.svg'
 
 export default function Username(props) {
 
@@ -92,12 +97,12 @@ export default function Username(props) {
           borderRadius: 1,
         }}
       >
-        <p>Item 1</p>
-        <p>Item 2</p>
-        <p>Item 3</p>
-        <p>Item 4</p>
-        <p>Item 5</p>
-        <p>Item 6</p>
+        <img src={InstagramIcon} className='usernameSocialIcon'/>
+        <img src={FaceBookIcon} className='usernameSocialIcon'/>
+        <img src={DribbleIcon} className='usernameSocialIcon'/>
+        <img src={BehanceIcon} className='usernameSocialIcon'/>
+        <img src={LinkedInIcon} className='usernameSocialIcon'/>
+        <img src={TwitterIcon} className='usernameSocialIcon'/>
       </Box>
       </div>
             {/* <h3 style={styles.textStruct}>
