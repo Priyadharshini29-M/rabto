@@ -98,35 +98,37 @@ export const userData = [{
                     heading: "Aagaram Restaurant",
                     description: "Unit of Sree Catering presents Aagaaram restaurant was our Phenomenal client .",
                     url: "https://rbsvirundhagam.in/",
-                    image: "imagetest"
+                    image: "imagetehttps://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Aagaaram%202.png?alt=media&token=02cfabfa-6c62-4d46-a35d-6855b12c556fst"
                 },
                 {
                     heading: "Coding for Deaf",
                     description: "We are an organisation dedicated to involving those who are hard of hearing in programming and working with arduino, as they are underrepresented in this field.",
-                    url: "https://www.brksystems.com/#",
-                    image: "imagetest"
+                    url: "https://www.brksystems.com/",
+                    image: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Group%208.png?alt=media&token=f0305eeb-66e9-4b3c-97d1-6700c0386f7f"
                 },
                 {
                     heading: "SM Exports Erode",
                     description: "We have made a niche for ourselves by fulfilling commodity requirements in India, Middle East, Sri Lanka , Malaysia",
                     url: "https://smexportserode.com/",
-                    image: "imagetest"
+                    image: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Group%2042.png?alt=media&token=a38d8ece-aeeb-4c2b-9c52-00c1865bd38c"
                 }
             ]
         },
         {
             title: "Education",
             links: [{
-                    institutionName: "Park Global International School",
+                    institutionName: "Amrita Vidyalayam School",
                     year: "2016 - 2018",
-                    institutionurl: "https://rbsvirundhagam.in/",
-                    grade: "A plus ultra Max"
+                    institutionurl: "https://www.eduvidya.com/Schools/Amrita-Vidyalayam,-Nallampalayam-Rd",
+                    grade: "80%",
+                    photo: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Group%20513.png?alt=media&token=5cdcf223-f6ed-4a59-b305-856aa5a4f98e"
                 },
                 {
-                    institutionName: "Sri Krishna Engineering collage",
+                    institutionName: "Jain (Deemed-to-be University)",
                     year: "2018 - 2022",
-                    institutionurl: "https://rbsvirundhagam.in/",
-                    grade: "Gold medalist"
+                    institutionurl: "https://www.jainuniversity.ac.in/",
+                    grade: "87%",
+                    photo: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Group%20512.png?alt=media&token=bef975b9-27a4-472a-b889-6126cac170fe"
                 }
             ],
         },
