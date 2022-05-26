@@ -98,7 +98,7 @@ export const userData = [{
                     heading: "Aagaram Restaurant",
                     description: "Unit of Sree Catering presents Aagaaram restaurant was our Phenomenal client .",
                     url: "https://rbsvirundhagam.in/",
-                    image: "imagetehttps://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Aagaaram%202.png?alt=media&token=02cfabfa-6c62-4d46-a35d-6855b12c556fst"
+                    image: "https://firebasestorage.googleapis.com/v0/b/gobyin-test-v1.appspot.com/o/Aagaaram%202.png?alt=media&token=02cfabfa-6c62-4d46-a35d-6855b12c556fst"
                 },
                 {
                     heading: "Coding for Deaf",
