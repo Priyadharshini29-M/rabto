@@ -216,7 +216,7 @@ export default function Username(props) {
                         <div style={styles.folderFormat}>
                             <h3 style={{marginLeft:"20px", fontSize:"23px"}}>
                                 {console.log('item ',item)}
-                               Title: {item.title}
+                         {item.title}
                             </h3>
                             <ScrollMenu>
                                 {item.links.map((lin, index) => {
