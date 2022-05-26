@@ -1,0 +1,22 @@
+.imgBox {
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usernameTxt {
+    font-family: 'Khula', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.userbioTxt {
+    font-family: 'Khula', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}

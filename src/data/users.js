@@ -2,10 +2,12 @@ export const userData = [{
     userBio: {
         name: "DJ Sri Vigneshwar",
         userName: "vicky",
+        position: "MD @goby.in",
         bio: "theDottest",
         email: "testtheDot@gmail.com",
         age: "22",
         resumeurl: "www.google.com",
+        profile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format",
         links: {
             instagram: "instagram/varun_ft",
             fb: "facebook/varun",
@@ -73,12 +75,14 @@ export const userData = [{
     ]
 }, {
     userBio: {
-        name: "Surin",
+        name: "Surinther Raja",
         userName: "suren",
-        bio: "CEO theDot Tech",
+        position: "CEO @goby.in",
+        bio: "Loud Introvert with big mission Fiercely local but available worldwide",
         email: "testtheDot@gmail.com",
         age: "21",
         resumeurl: "www.google.com",
+        profile: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format",
         links: {
             instagram: "instagram/varun_ft",
             fb: "facebook/varun",

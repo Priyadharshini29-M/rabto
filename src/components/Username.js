@@ -1,4 +1,5 @@
 import React from 'react'
+import './username.css'
 
 export default function Username(props) {
 
@@ -7,12 +8,18 @@ export default function Username(props) {
 
 
     const styles = {
+        mainLayout: {
+            width:'100%',
+            height:'100%',
+            backgroundColor:'#F4F4F4'
+        },
         textStruct: {
-            textAlign: 'center'
+            textAlign: 'center',
+            color:'#162449'
         },
         folderStruct: {
-            margin: 20,
-            backgroundColor: '#5C5C5C',
+            margin: 7,
+            backgroundColor: '#CFCFCF',
             borderRadius:8,
             padding:5
         },
@@ -32,15 +39,21 @@ export default function Username(props) {
     }
 
   return (
-    <div>  
-        <div>
-            <h2 style={styles.textStruct}>
+    <div style={styles.mainLayout}>  
+        <div style={{
+            padding: 20
+        }}>
+            <img
+                src={data.userBio.profile}
+                className='imgBox'
+            />
+            <h2 style={styles.textStruct} className='usernameTxt'>
             {data.userBio.name}
             </h2>
-            <h3 style={styles.textStruct}>
+            {/* <h3 style={styles.textStruct}>
                 @{data.userBio.userName}
-            </h3>
-            <h3 style={styles.textStruct}>
+            </h3> */}
+            <h3 style={styles.textStruct} className='userbioTxt'>
             {data.userBio.bio}
             </h3>
             <h3 style={styles.textStruct}>
@@ -49,9 +62,7 @@ export default function Username(props) {
             <h3 style={styles.textStruct}>
             {data.userBio.age}
             </h3>
-            <p style={styles.textStruct}>
-                User Link
-            </p>
+
             <div style={styles.folderStruct}>
                 {data.userLinks && data.userLinks.map((item, index) => {
                     if(item.title === 'Portfolio')
