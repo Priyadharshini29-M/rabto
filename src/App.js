@@ -1,7 +1,8 @@
 import React from 'react';
-import Home from "./screens/Home"
+import Home from "./dummy/screens/Home"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Profile from './screens/Profile';
+import Profile from './dummy/screens/Profile';
+
 
 function App() {
   return (

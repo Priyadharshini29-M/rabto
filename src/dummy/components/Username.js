@@ -1,24 +1,20 @@
-import React from 'react'
-import './username.css'
-import LogoIcon from '../assets/logos/verified.svg'
+import React from 'react';
+import './username.css';
+import LogoIcon from '../assets/logos/verified.svg';
 import { Box } from '@mui/material';
-import InstagramIcon from '../assets/logos/instagram.svg'
-import FaceBookIcon from '../assets/logos/facebook.svg'
-import DribbleIcon from '../assets/logos/dribbble.svg'
-import BehanceIcon from '../assets/logos/behance.svg'
-import LinkedInIcon from '../assets/logos/linkedin-in.svg'
-import TwitterIcon from '../assets/logos/twitter.svg'
+import InstagramIcon from '../assets/logos/instagram.svg';
+import FaceBookIcon from '../assets/logos/facebook.svg';
+import DribbleIcon from '../assets/logos/dribbble.svg';
+import BehanceIcon from '../assets/logos/behance.svg';
+import LinkedInIcon from '../assets/logos/linkedin-in.svg';
+import TwitterIcon from '../assets/logos/twitter.svg';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
-import SuruResume from '../assets/logos/resume/suru.pdf'
-import GoBusyLogo from '../assets/logos/gobylogo.png'
-import { Link } from 'react-router-dom';
-import { fontSize } from '@mui/system';
+import SuruResume from '../assets/logos/resume/suru.pdf';
+import GoBusyLogo from '../assets/logos/gobylogo.png';
 
 export default function Username(props) {
 
-
     const data = props.data;
-
 
     const styles = {
         mainLayout: {
