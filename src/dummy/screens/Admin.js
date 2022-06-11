@@ -6,7 +6,7 @@ function Admin() {
         Admin
         <div>
             <p>
-                Here Admin 
+                Here Admin
             </p>
         </div>
     </div>
