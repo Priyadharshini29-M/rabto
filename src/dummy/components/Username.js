@@ -49,10 +49,7 @@ export default function Username(props) {
 
   return (
     <div style={styles.mainLayout}>  
-        <div style={{
-            
-            
-        }}>
+        <div>
             <div style={{backgroundColor:"#F4F4F4"}}>
             <img
                 src={data.userBio.profile}
@@ -79,7 +76,6 @@ export default function Username(props) {
         }}
         src={LogoIcon}
         />
-     
       </Box>
     
       </div>
