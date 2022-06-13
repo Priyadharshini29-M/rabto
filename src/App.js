@@ -6,6 +6,7 @@ import Dash from './dummy/screens/Admin';
 
 
 import PrivateRoute from './dummy/routes/PrivateRoutes';
+import Tools from './dummy/screens/Tools';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/:username' element={<Profile/>} />
         <Route path='/' element={<Home/>} />
         <Route path="/admin" element={<Dash />} />
+        <Route path="/tools" element={<Tools />} />
       </Routes>
     </Router>
   );

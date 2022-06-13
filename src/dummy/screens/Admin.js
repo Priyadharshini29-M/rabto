@@ -17,6 +17,10 @@ function Admin() {
     const [phase, setphase] = useState('');
     const [images, setImages] = React.useState([]);
 
+
+    const [folderList, setfolderList] = useState([]);
+
+
     const maxNumber = 69;
   
     const onChange = (imageList, addUpdateIndex) => {
@@ -138,63 +142,240 @@ function Admin() {
         )
     }
 
-  return (
-    <Container>
-      
-        <Stack spacing={2}>
-        <div>
-            <div style={{marginTop: 25}}>
-            <Typography variant="h3" component="h2">
-                Admin
-                </Typography>
-            </div>
-        </div>
-        <div>
+    const CreateFolderAndLink = () => {
+      return(
+        <div
+    
+        >
+        <Container
+        style={{
+            width:'80%',
+            backgroundColor:'#07B848',
+            borderRadius:8,
+            marginTop:30,
+            marginBottom:15,
+            padding:25
+        }}
+        >
             <div>
-            <Typography variant="h6" component="h2" >
-                Enter User Name
-            </Typography>
-            <TextField style={{marginTop:10}} fullWidth label="User Name" id="fullWidth" onChange={(e) => setusername(e.target.value)} />
+            <div style={{
+               padding:10,
+            }}>
+                
+    <Typography variant="h6" component="h2" style={{
+        color: '#ffffff'
+    }}>
+                    Enter the Heading
+                </Typography>  
+                <div>
+                <TextField fullWidth 
+                
+                label="Enter the heading" id="fullWidth" style={{
+                   marginTop:15 
+                }}/>
+                </div>
+            </div>
+            <div style={{
+               padding:10 
+            }}>
+                
+    <Typography variant="h6" component="h2" style={{
+        color: '#ffffff'
+    }}>
+                    Enter the Description
+                </Typography>  
+                <div>
+                <TextField fullWidth label="Enter the description" id="fullWidth" style={{
+                   marginTop:15 
+                }}/>
+                </div>
+            </div>
+            <div style={{
+               padding:10 
+            }}>
+                
+    <Typography variant="h6" component="h2" style={{
+        color: '#ffffff'
+    }}>
+                    Enter the Category
+                </Typography>  
+                <div>
+                <TextField fullWidth label="Enter the category" id="fullWidth" style={{
+                   marginTop:15 
+                }}/>
+                </div>
+            </div>
+            <div style={{
+                width: '80%'
+            }}>
+            </div>
+            </div>
+            <div style={{
+                textAlign:'center',
+                marginTop:10,
+                marginBottom:15
+            }}>
+            <Button variant="contained" style={{
+                width: '80%',
+                margin: 20,
+                backgroundColor:'#ffffff',
+                color:'#000000'
+            }}>ADD</Button>
+            </div>
+          
+            <div style={{
+              width:'100%',
+              backgroundColor:'#FFFFFF',
+              borderRadius:8,
+              marginTop:30,
+              height:100
+        }}>
+        <div>
+                {folderList && folderList.map((item, index) => {
+                    return(
+                        <div>
+                            <p>
+                                {item.name}
+                            </p>
+                            <p>
+                                {item.description}
+                            </p>
+                        </div>
+                    )
+                })
+                }
             </div>
         </div>
-        <div>
-        <div>
-            <Typography variant="h6" component="h2" >
-                Enter Full Name
-            </Typography>
-            <TextField style={{marginTop:10}} fullWidth label="User's Full Name" id="fullWidth" onChange={(e) => setfullName(e.target.value)}/>
-            </div>
+        
+        </Container>
+      
         </div>
+      )
+    }
+
+
+    const [firstStage, setfirstStage] = useState(true);
+    const [secoundStage, setsecoundStage] = useState(false);
+    const [thrirdStage, setthrirdStage] = useState(false);
+
+    const toFolderStage = (e) => {
+      e.preventDefault();
+      setsecoundStage(true);
+    }
+
+    const nextStageToSecond = () => {
+      setsecoundStage(true);
+      setfirstStage(false);
+      setthrirdStage(false);
+    }
+
+    const backStageToOne = () => {
+      setfirstStage(true);
+      setsecoundStage(false);
+      setthrirdStage(false);
+    }
+
+    const nextStageToThird = () => {
+      setfirstStage(false);
+      setsecoundStage(false);
+      setthrirdStage(true);
+    }
+
+    const backStageToSecond = () => {
+      setfirstStage(false);
+      setsecoundStage(true);
+      setthrirdStage(false);
+    }
+
+
+
+    
+    if(firstStage){
+      return (
         <div>
-        <div>
-            <Typography variant="h6" component="h2">
-                Enter User Email
-            </Typography>
-            <TextField style={{marginTop:10}} fullWidth label="User's Email" id="fullWidth" onChange={(e) => setemail(e.target.value)}/>
-            </div>
+          {firstStage ? (
+              <Container>
+          
+              <Stack spacing={2}>
+              <div>
+                  <div style={{marginTop: 25}}>
+                  <Typography variant="h3" component="h2">
+                      Admin
+                      </Typography>
+                  </div>
+              </div>
+              <div>
+                  <div>
+                  <Typography variant="h6" component="h2" >
+                      Enter User Name
+                  </Typography>
+                  <TextField style={{marginTop:10}} fullWidth label="User Name" id="fullWidth" onChange={(e) => setusername(e.target.value)} />
+                  </div>
+              </div>
+              <div>
+              <div>
+                  <Typography variant="h6" component="h2" >
+                      Enter Full Name
+                  </Typography>
+                  <TextField style={{marginTop:10}} fullWidth label="User's Full Name" id="fullWidth" onChange={(e) => setfullName(e.target.value)}/>
+                  </div>
+              </div>
+              <div>
+              <div>
+                  <Typography variant="h6" component="h2">
+                      Enter User Email
+                  </Typography>
+                  <TextField style={{marginTop:10}} fullWidth label="User's Email" id="fullWidth" onChange={(e) => setemail(e.target.value)}/>
+                  </div>
+              </div>
+              <div>
+              <div>
+                  <Typography variant="h6" component="h2">
+                      Enter User Bio
+                  </Typography>
+                  <TextField style={{marginTop:10}} fullWidth label="User's Bio" id="fullWidth" onChange={(e) => setbio(e.target.value)}/>
+                  </div>
+              </div>
+              <div>
+              <div>
+                  <Typography variant="h6" component="h2">
+                      Enter User Phase
+                  </Typography>
+                  <TextField style={{marginTop:10}} fullWidth label="User's Phase" id="fullWidth" onChange={(e) => setphase(e.target.value)} />
+                  </div>
+              </div>
+              
+              <div>
+                  <ImageSection/>
+          <Button onClick={(e) => nextStageToSecond(e)} variant="contained" style={{marginTop:15, backgroundColor:'#00921B', width:'80%'}}>Next</Button>
+
+              </div>
+              </Stack>
+          </Container>
+          ) : (
+            <Container>
+          
+              <div>
+                <p>
+                  Secound stage
+                  </p>
+              </div>
+        </Container>
+          )
+    
+          }
         </div>
-        <div>
-        <div>
-            <Typography variant="h6" component="h2">
-                Enter User Bio
-            </Typography>
-            <TextField style={{marginTop:10}} fullWidth label="User's Bio" id="fullWidth" onChange={(e) => setbio(e.target.value)}/>
-            </div>
-        </div>
-        <div>
-        <div>
-            <Typography variant="h6" component="h2">
-                Enter User Phase
-            </Typography>
-            <TextField style={{marginTop:10}} fullWidth label="User's Phase" id="fullWidth" />
-            </div>
-        </div>
-        <div>
-            <ImageSection/>
-        </div>
-        </Stack>
-    </Container>
-  )
+        
+      )
+    }
+    else if(secoundStage){
+      return (
+        <Container>
+          <CreateFolderAndLink/>
+        </Container>
+      )
+    }
+ 
 }
 
 export default Admin
