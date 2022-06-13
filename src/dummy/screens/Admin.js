@@ -20,6 +20,10 @@ function Admin() {
 
     const [folderList, setfolderList] = useState([]);
 
+    const [folderTitle, setfolderTitle] = useState('');
+    const [folderDescription, setfolderDescription] = useState('');
+    const [folderCategory, setfolderCategory] = useState('');
+
 
     const maxNumber = 69;
   
@@ -169,7 +173,7 @@ function Admin() {
                 </Typography>  
                 <div>
                 <TextField fullWidth 
-                
+                onChange={(e) => setfolderTitle(e.target.value)}
                 label="Enter the heading" id="fullWidth" style={{
                    marginTop:15 
                 }}/>
@@ -185,7 +189,9 @@ function Admin() {
                     Enter the Description
                 </Typography>  
                 <div>
-                <TextField fullWidth label="Enter the description" id="fullWidth" style={{
+                <TextField
+                onChange={(e) => setfolderDescription(e.target.value)}
+                fullWidth label="Enter the description" id="fullWidth" style={{
                    marginTop:15 
                 }}/>
                 </div>
@@ -200,7 +206,9 @@ function Admin() {
                     Enter the Category
                 </Typography>  
                 <div>
-                <TextField fullWidth label="Enter the category" id="fullWidth" style={{
+                <TextField 
+                onChange={(e) => setfolderCategory(e.target.value)}
+                fullWidth label="Enter the category" id="fullWidth" style={{
                    marginTop:15 
                 }}/>
                 </div>
@@ -248,6 +256,7 @@ function Admin() {
         </div>
         
         </Container>
+        <Button onClick={(e) => backStageToOne(e)} variant="contained" style={{marginTop:15, backgroundColor:'#CF1500', width:'20%'}}>Back</Button>
       
         </div>
       )
@@ -347,7 +356,7 @@ function Admin() {
               
               <div>
                   <ImageSection/>
-          <Button onClick={(e) => nextStageToSecond(e)} variant="contained" style={{marginTop:15, backgroundColor:'#00921B', width:'80%'}}>Next</Button>
+          <Button onClick={(e) => nextStageToSecond(e)} variant="contained" style={{marginTop:15, backgroundColor:'#00921B', width:'100%', marginRight:25, marginLeft:25}}>Next</Button>
 
               </div>
               </Stack>
