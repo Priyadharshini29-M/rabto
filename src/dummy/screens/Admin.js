@@ -6,7 +6,9 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import ImageUploading from 'react-images-uploading';
 import axios from 'axios';
-
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 
 function Admin() {
 
@@ -20,13 +22,19 @@ function Admin() {
 
     const [folderList, setfolderList] = useState([]);
 
-    const [folderTitle, setfolderTitle] = useState('');
-    const [folderDescription, setfolderDescription] = useState('');
-    const [folderCategory, setfolderCategory] = useState('');
-
 
     const maxNumber = 69;
-  
+
+
+    const fileFolderData = {
+
+    } 
+
+    const onFileAndFolderPush = () => {
+        
+    }
+
+
     const onChange = (imageList, addUpdateIndex) => {
       // data for submit
       console.log(imageList, addUpdateIndex);
@@ -147,10 +155,35 @@ function Admin() {
     }
 
     const CreateFolderAndLink = () => {
+
+      const [folderTitle, setfolderTitle] = useState('');
+      const [folderDescription, setfolderDescription] = useState('');
+      const [folderCategory, setfolderCategory] = useState('');
+      const [folderBanner, setfolderBanner] = useState('');
+  
+      const [linkTitle, setlinkTitle] = useState('');
+      const [linkDescription, setlinkDescription] = useState('');
+      const [linkURL, setlinkURL] = useState('');
+      const [linkLogo, setlinkLogo] = useState('');
+
+  
+      const folderDataPush = () => {
+
+        let folderData = {
+          heading: folderTitle,
+          description: folderDescription,
+          category: folderCategory
+        }
+  
+        let newFolderList = [...folderList];
+        newFolderList.push(folderData);
+        setfolderList(newFolderList);
+  
+  
+      }
+
       return(
-        <div
-    
-        >
+        <div>
         <Container
         style={{
             width:'80%',
@@ -223,7 +256,10 @@ function Admin() {
                 marginTop:10,
                 marginBottom:15
             }}>
-            <Button variant="contained" style={{
+            <Button 
+            onClick={() => folderDataPush()}
+            variant="contained"
+            style={{
                 width: '80%',
                 margin: 20,
                 backgroundColor:'#ffffff',
@@ -236,18 +272,95 @@ function Admin() {
               backgroundColor:'#FFFFFF',
               borderRadius:8,
               marginTop:30,
-              height:100
         }}>
         <div>
                 {folderList && folderList.map((item, index) => {
                     return(
-                        <div>
+                        <div style={{
+                          width:'70%',
+                          backgroundColor: '#D5D5D5',
+                          alignSelf: 'center',
+                          borderRadius:8,
+                          margin:15,
+                          padding:10
+                        }}>
                             <p>
-                                {item.name}
+                                {item.heading}
                             </p>
                             <p>
                                 {item.description}
                             </p>
+                            <p>
+                                {item.category}
+                            </p>
+                            <div style={{
+                                width:'78%',
+                                backgroundColor:'#B6B6B6',
+                            }}>
+    <div style={{
+               padding:10 
+            }}>
+                
+    <Typography variant="h6" component="h2" style={{
+        color: '#ffffff'
+    }}>
+                    Enter the Link Title
+                </Typography>  
+                <div>
+                <TextField 
+                onChange={(e) => setlinkTitle(e.target.value)}
+                fullWidth label="Enter the category" id="fullWidth" style={{
+                   marginTop:15 
+                }}/>
+                </div>
+            </div>
+    <div style={{
+               padding:10 
+            }}>
+                
+    <Typography variant="h6" component="h2" style={{
+        color: '#ffffff'
+    }}>
+                    Enter the Link Title
+                </Typography>  
+                <div>
+                <TextField 
+                onChange={(e) => setlinkDescription(e.target.value)}
+                fullWidth label="Enter the category" id="fullWidth" style={{
+                   marginTop:15 
+                }}/>
+                </div>
+            </div>
+    <div style={{
+               padding:10 
+            }}>
+                
+    <Typography variant="h6" component="h2" style={{
+        color: '#ffffff'
+    }}>
+                    Enter the Link Title
+                </Typography>  
+                <div>
+                <TextField 
+                onChange={(e) => setlinkURL(e.target.value)}
+                fullWidth label="Enter the category" id="fullWidth" style={{
+                   marginTop:15 
+                }}/>
+                </div>
+            </div>
+    <div style={{
+               padding:10 
+            }}>
+                
+            <p>
+              File Upload
+            </p>
+                
+            </div>
+
+          <Button onClick={(e) => (e)} variant="contained" style={{marginTop:15, backgroundColor:'#0D929EF8', width:'30%'}}>Add Link</Button>
+
+                            </div>
                         </div>
                     )
                 })
@@ -262,6 +375,83 @@ function Admin() {
       )
     }
 
+    const UserData = () => {
+      return(
+        <div>
+        {firstStage ? (
+            <Container>
+        
+            <Stack spacing={2}>
+            <div>
+                <div style={{marginTop: 25}}>
+                <Typography variant="h3" component="h2">
+                    Admin
+                    </Typography>
+                </div>
+            </div>
+            <div>
+                <div>
+                <Typography variant="h6" component="h2" >
+                    Enter User Name
+                </Typography>
+                <TextField style={{marginTop:10}} fullWidth label="User Name" id="fullWidth" onChange={(e) => setusername(e.target.value)} />
+                </div>
+            </div>
+            <div>
+            <div>
+                <Typography variant="h6" component="h2" >
+                    Enter Full Name
+                </Typography>
+                <TextField style={{marginTop:10}} fullWidth label="User's Full Name" id="fullWidth" onChange={(e) => setfullName(e.target.value)}/>
+                </div>
+            </div>
+            <div>
+            <div>
+                <Typography variant="h6" component="h2">
+                    Enter User Email
+                </Typography>
+                <TextField style={{marginTop:10}} fullWidth label="User's Email" id="fullWidth" onChange={(e) => setemail(e.target.value)}/>
+                </div>
+            </div>
+            <div>
+            <div>
+                <Typography variant="h6" component="h2">
+                    Enter User Bio
+                </Typography>
+                <TextField style={{marginTop:10}} fullWidth label="User's Bio" id="fullWidth" onChange={(e) => setbio(e.target.value)}/>
+                </div>
+            </div>
+            <div>
+            <div>
+                <Typography variant="h6" component="h2">
+                    Enter User Phase
+                </Typography>
+                <TextField style={{marginTop:10}} fullWidth label="User's Phase" id="fullWidth" onChange={(e) => setphase(e.target.value)} />
+                </div>
+            </div>
+            
+            <div>
+                <ImageSection/>
+        <Button onClick={(e) => nextStageToSecond(e)} variant="contained" style={{marginTop:15, backgroundColor:'#00921B', width:'100%', marginRight:25, marginLeft:25}}>Next</Button>
+
+            </div>
+            </Stack>
+        </Container>
+        ) : (
+          <Container>
+        
+            <div>
+              <p>
+                Secound stage
+                </p>
+            </div>
+      </Container>
+        )
+  
+        }
+      </div>
+      )
+    }
 
     const [firstStage, setfirstStage] = useState(true);
     const [secoundStage, setsecoundStage] = useState(false);
@@ -300,82 +490,7 @@ function Admin() {
 
     
     if(firstStage){
-      return (
-        <div>
-          {firstStage ? (
-              <Container>
-          
-              <Stack spacing={2}>
-              <div>
-                  <div style={{marginTop: 25}}>
-                  <Typography variant="h3" component="h2">
-                      Admin
-                      </Typography>
-                  </div>
-              </div>
-              <div>
-                  <div>
-                  <Typography variant="h6" component="h2" >
-                      Enter User Name
-                  </Typography>
-                  <TextField style={{marginTop:10}} fullWidth label="User Name" id="fullWidth" onChange={(e) => setusername(e.target.value)} />
-                  </div>
-              </div>
-              <div>
-              <div>
-                  <Typography variant="h6" component="h2" >
-                      Enter Full Name
-                  </Typography>
-                  <TextField style={{marginTop:10}} fullWidth label="User's Full Name" id="fullWidth" onChange={(e) => setfullName(e.target.value)}/>
-                  </div>
-              </div>
-              <div>
-              <div>
-                  <Typography variant="h6" component="h2">
-                      Enter User Email
-                  </Typography>
-                  <TextField style={{marginTop:10}} fullWidth label="User's Email" id="fullWidth" onChange={(e) => setemail(e.target.value)}/>
-                  </div>
-              </div>
-              <div>
-              <div>
-                  <Typography variant="h6" component="h2">
-                      Enter User Bio
-                  </Typography>
-                  <TextField style={{marginTop:10}} fullWidth label="User's Bio" id="fullWidth" onChange={(e) => setbio(e.target.value)}/>
-                  </div>
-              </div>
-              <div>
-              <div>
-                  <Typography variant="h6" component="h2">
-                      Enter User Phase
-                  </Typography>
-                  <TextField style={{marginTop:10}} fullWidth label="User's Phase" id="fullWidth" onChange={(e) => setphase(e.target.value)} />
-                  </div>
-              </div>
-              
-              <div>
-                  <ImageSection/>
-          <Button onClick={(e) => nextStageToSecond(e)} variant="contained" style={{marginTop:15, backgroundColor:'#00921B', width:'100%', marginRight:25, marginLeft:25}}>Next</Button>
-
-              </div>
-              </Stack>
-          </Container>
-          ) : (
-            <Container>
-          
-              <div>
-                <p>
-                  Secound stage
-                  </p>
-              </div>
-        </Container>
-          )
-    
-          }
-        </div>
-        
-      )
+      return <UserData/>
     }
     else if(secoundStage){
       return (
