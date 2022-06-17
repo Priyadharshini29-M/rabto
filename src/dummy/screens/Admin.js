@@ -9,6 +9,7 @@ import axios from 'axios';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { v4 as uuidv4 } from 'uuid';
 
 function Admin() {
 
@@ -170,9 +171,11 @@ function Admin() {
       const folderDataPush = () => {
 
         let folderData = {
+          id: uuidv4(),
           heading: folderTitle,
           description: folderDescription,
-          category: folderCategory
+          category: folderCategory,
+          linkDataList:[]
         }
   
         let newFolderList = [...folderList];
@@ -181,6 +184,20 @@ function Admin() {
   
   
       }
+
+      const addLinkDataInFolders = (e,id) => {
+        console.log(id, linkTitle, linkDescription, linkURL);
+
+        const folderFindData = folderList.filter(i => i.id === id);
+        console.log(folderFindData);
+
+
+        setlinkTitle('');
+        setlinkDescription('');
+        setlinkURL('');
+
+      }
+
 
       return(
         <div>
@@ -293,6 +310,9 @@ function Admin() {
                             <p>
                                 {item.category}
                             </p>
+                            <p>
+                                {item.id}
+                            </p>
                             <div style={{
                                 width:'78%',
                                 backgroundColor:'#B6B6B6',
@@ -307,7 +327,8 @@ function Admin() {
                     Enter the Link Title
                 </Typography>  
                 <div>
-                <TextField 
+                <TextField
+                value={linkTitle} 
                 onChange={(e) => setlinkTitle(e.target.value)}
                 fullWidth label="Enter the category" id="fullWidth" style={{
                    marginTop:15 
@@ -325,6 +346,8 @@ function Admin() {
                 </Typography>  
                 <div>
                 <TextField 
+                value={linkDescription} 
+
                 onChange={(e) => setlinkDescription(e.target.value)}
                 fullWidth label="Enter the category" id="fullWidth" style={{
                    marginTop:15 
@@ -342,6 +365,8 @@ function Admin() {
                 </Typography>  
                 <div>
                 <TextField 
+                value={linkURL} 
+
                 onChange={(e) => setlinkURL(e.target.value)}
                 fullWidth label="Enter the category" id="fullWidth" style={{
                    marginTop:15 
@@ -358,7 +383,7 @@ function Admin() {
                 
             </div>
 
-          <Button onClick={(e) => (e)} variant="contained" style={{marginTop:15, backgroundColor:'#0D929EF8', width:'30%'}}>Add Link</Button>
+          <Button onClick={(e) => addLinkDataInFolders(e,item.id)} variant="contained" style={{marginTop:15, backgroundColor:'#0D929EF8', width:'30%'}}>Add Link</Button>
 
                             </div>
                         </div>
