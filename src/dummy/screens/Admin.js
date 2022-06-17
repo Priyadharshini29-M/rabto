@@ -6,12 +6,21 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import ImageUploading from 'react-images-uploading';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { v4 as uuidv4 } from 'uuid';
 
 function Admin() {
+
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
+  
 
     const [username, setusername] = useState('');
     const [fullName, setfullName] = useState('');
@@ -213,9 +222,12 @@ function Admin() {
 
       return(
         <div>
+          <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={6} md={10}>
         <Container
         style={{
-            width:'80%',
+            width:'100%',
             backgroundColor:'#07B848',
             borderRadius:8,
             marginTop:30,
@@ -406,8 +418,16 @@ function Admin() {
         </div>
         
         </Container>
+        </Grid>
+        <Grid item xs={6} md={2}>
+          <div>
+            All Folder and List Display
+          </div>
+        </Grid>
+   
+                </Grid>
         <Button onClick={(e) => backStageToOne(e)} variant="contained" style={{marginTop:15, backgroundColor:'#CF1500', width:'20%'}}>Back</Button>
-      
+        </Box>
         </div>
       )
     }
