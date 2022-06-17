@@ -175,7 +175,8 @@ function Admin() {
           heading: folderTitle,
           description: folderDescription,
           category: folderCategory,
-          linkDataList:[]
+          linkDataList:[],
+          positions:0
         }
   
         let newFolderList = [...folderList];
@@ -188,8 +189,19 @@ function Admin() {
       const addLinkDataInFolders = (e,id) => {
         console.log(id, linkTitle, linkDescription, linkURL);
 
+        const newLinkData = {
+          id: uuidv4(),
+          title: linkTitle,
+          description: linkDescription,
+          url: linkURL
+        }
+        
         const folderFindData = folderList.filter(i => i.id === id);
-        console.log(folderFindData);
+        const folderFindIndex = folderList.findIndex(i => i.id === id);
+        folderList.splice(folderFindIndex, -1)
+        console.log('folderList - ',folderList);
+        folderFindData[0].linkDataList.push(newLinkData)
+        console.log('folderFindData - ',folderFindData);
 
 
         setlinkTitle('');
