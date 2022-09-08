@@ -13,7 +13,11 @@ import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import SuruResume from '../assets/logos/resume/suru.pdf';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
 
-export default function Busername(props) {
+//tempAssets
+import BusinessLogo from "../../assets/download.png"
+import { Container } from '@mui/system';
+
+export default function Username(props) {
 
     const data = props.data;
 
@@ -49,14 +53,18 @@ export default function Busername(props) {
     }
 
   return (
+    <Container>
     <div style={styles.mainLayout}>  
         <div>
             <div style={{backgroundColor:"#F4F4F4"}}>
-            <img
-                src={data.userBio.profile}
-                className='imgBox userprofileImg'
+                <div className='logo--cont'>
+                <img
+                src={BusinessLogo}
+                className='business-logo'
                 
             />
+                </div>
+            
          
             <div className='usernameTxtBox'>
       <Box
@@ -66,7 +74,7 @@ export default function Busername(props) {
         }}
         >
         <h2 style={styles.textStruct} className='usernameTxt'>
-        {data.userBio.name}
+        the Dot Tech
         </h2>
         <img
         style={{
@@ -89,7 +97,7 @@ export default function Busername(props) {
                         </h3>
                     </Fade>
                     <div style={{ width: '100%' }}>
-                        <Slide bottom duration={500}>
+                        <Slide bottom duration={1000}>
                         <Box
                             // sx={{
                             //   display: 'flex',
@@ -99,12 +107,12 @@ export default function Busername(props) {
                             // }}
                             className='usernameSocialIconBox'
                         >
-                            <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} style={{}} className='usernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='usernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='usernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.behance, "_blank")} src={BehanceIcon} className='usernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.linkedin, "_blank")} src={LinkedInIcon} className='usernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='usernameSocialIcon' />
+                            <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' />
+                            <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='busernameSocialIcon' />
+                            <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='busernameSocialIcon' />
+                            <img onClick={() => window.open(data.userBio.links.behance, "_blank")} src={BehanceIcon} className='busernameSocialIcon' />
+                            <img onClick={() => window.open(data.userBio.links.linkedin, "_blank")} src={LinkedInIcon} className='busernameSocialIcon' />
+                            <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='busernameSocialIcon' />
                         </Box>
                         </Slide>
                     </div>
@@ -137,10 +145,10 @@ export default function Busername(props) {
                                         }}>
                                             {item.links.map((lin, index) => {
                                                 return (
-                                                    <div style={{}}>
-                                                        <div className='card--menu'>2
+                                                    <div style={{padding:"15px 0"}}>
+                                                        <div className='card--menu'>
                                                             <div>
-                                                                <img src={lin.image} />
+                                                                <img src={lin.image} style={{ width: "100%"}} />
                                                             </div>
                                                             <div style={{}} >
                                                                 <p style={{ fontWeight: "600", fontSize: "20px", textAlign: "center" }} >
@@ -184,6 +192,7 @@ export default function Busername(props) {
                                     }}>
                                 {item.links.map((lin, index) => {
                                     return(
+                                        <div style={{padding:"15px 0"}}>
                                         <div className='card--menu'>
                                             <p 
                                                  style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
@@ -202,6 +211,7 @@ export default function Busername(props) {
                                             </button>
                                             
                                         </div>
+                                        </div>
                                     )
                                 }) 
 
@@ -219,6 +229,7 @@ export default function Busername(props) {
                             <ScrollMenu>
                                 {item.links.map((lin, index) => {
                                     return(
+                                        <div style={{padding:"15px 0"}}>
                                         <div className='card--menu'>
                                             <div>
                                                 <img className='cert--img' src={lin.certificateLink} />
@@ -238,6 +249,7 @@ export default function Busername(props) {
                                         
                                             
                                             
+                                        </div>
                                         </div>
                                         // <div className='card--menu'>
                                         //     <div>
@@ -274,5 +286,6 @@ export default function Busername(props) {
             </div>
         </div>
         </div>
+        </Container>
     )
 }

@@ -137,8 +137,8 @@ export default function Username(props) {
                                         }}>
                                             {item.links.map((lin, index) => {
                                                 return (
-                                                    <div style={{}}>
-                                                        <div className='card--menu'>2
+                                                    <div style={{padding:"15px 0"}}>
+                                                        <div className='card--menu'>
                                                             <div>
                                                                 <img src={lin.image} />
                                                             </div>
@@ -184,6 +184,7 @@ export default function Username(props) {
                                     }}>
                                 {item.links.map((lin, index) => {
                                     return(
+                                        <div style={{padding:"15px 0"}}>
                                         <div className='card--menu'>
                                             <p 
                                                  style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
@@ -202,6 +203,7 @@ export default function Username(props) {
                                             </button>
                                             
                                         </div>
+                                        </div>
                                     )
                                 }) 
 
@@ -219,6 +221,7 @@ export default function Username(props) {
                             <ScrollMenu>
                                 {item.links.map((lin, index) => {
                                     return(
+                                        <div style={{padding:"15px 0"}}>
                                         <div className='card--menu'>
                                             <div>
                                                 <img className='cert--img' src={lin.certificateLink} />
@@ -238,6 +241,7 @@ export default function Username(props) {
                                         
                                             
                                             
+                                        </div>
                                         </div>
                                         // <div className='card--menu'>
                                         //     <div>
