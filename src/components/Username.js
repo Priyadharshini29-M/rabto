@@ -198,101 +198,97 @@ export default function Username(props) {
                                         marginBottom: 45,
 
                                     }}>
-                                        {item.links.map((lin, index) => {
-                                            return (
-                                                <div className='card--menu'>
-                                                    <p
-                                                        style={{ fontWeight: "600", fontSize: "20px", textAlign: "center" }}
-                                                    >
-                                                        {lin.institutionName}
-                                                    </p>
-                                                    <p style={{ fontWeight: "400", fontSize: "20px", textAlign: "center" }}>
-                                                        {lin.year}
-                                                    </p>
+                                {item.links.map((lin, index) => {
+                                    return(
+                                        <div className='card--menu'>
+                                            <p 
+                                                 style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
+                                            >
+                                            {lin.institutionName}
+                                            </p>
+                                            <p  style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
+                                            {lin.year}
+                                            </p>
+                                            
+                                            <p  style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
+                                            {lin.grade}
+                                            </p>
+                                            <button onClick={() => window.open(lin.institutionurl, "_blank")} className='btn--dis'>
+                                                DISCOVER
+                                            </button>
+                                            
+                                        </div>
+                                    )
+                                }) 
 
-                                                    <p style={{ fontWeight: "400", fontSize: "20px", textAlign: "center" }}>
-                                                        {lin.grade}
-                                                    </p>
-                                                    <button onClick={() => window.open(lin.institutionurl, "_blank")} className='btn--dis'>
-                                                        DISCOVER
-                                                    </button>
+                                }
+                            </ScrollMenu>    
+                        </div>    
+                    )
+                    if(item.title === 'Certifications')
+                    return(
+                        <div style={styles.folderFormat}>
+                            <h3 style={{marginLeft:"20px", fontSize:"23px"}}>
+                                {console.log('item ',item)}
+                         {item.title}
+                            </h3>
+                            <ScrollMenu>
+                                {item.links.map((lin, index) => {
+                                    return(
+                                        <div className='card--menu'>
+                                            <div>
+                                                <img className='cert--img' src={lin.certificateLink} />
+                                            </div>
+                                            <div style={{}} >
+                                                <p style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}} >
+                                                {lin.courseName}
+                                                </p>
+                                            </div>    
+                                            <p style={{fontSize:"15px", textAlign:"center"}}>
+                                            {lin.yoc}
+                                            </p>
+                                            <p style={{fontSize:"15px", textAlign:"center"}}>
+                                            {lin.rateYourSkill}
+                                            </p>
+                                            
+                                        
+                                            
+                                            
+                                        </div>
+                                        // <div className='card--menu'>
+                                        //     <div>
+                                        //         <img  />
+                                        //     {lin.certificateLink}
+                                        //     </div>
+                                            
+                                        //     <p style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}>
+                                        //     {lin.courseName}
+                                        //     </p>
+                                        //     <p style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
+                                        //     {lin.yoc}
+                                        //     </p>
+                                            
+                                        //     <p>
+                                        //     {lin.rateYourSkill}
+                                        //     </p>
+                                            
+                                        // </div>
+                                    )
+                                }) 
 
-                                                </div>
-                                            )
-                                        })
-
-                                        }
-                                    </ScrollMenu>
-                                </div>
-                            )
-                        if (item.title === 'Certifications')
-                            return (
-                                <div style={styles.folderFormat}>
-                                    <h3 style={{ marginLeft: "20px", fontSize: "23px" }}>
-                                        {console.log('item ', item)}
-                                        Title: {item.title}
-                                    </h3>
-                                    <ScrollMenu>
-                                        {item.links.map((lin, index) => {
-                                            return (
-                                                <div className='card--menu'>
-                                                    <div>
-                                                        <img className='cert--img' src={lin.certificateLink} />
-                                                    </div>
-                                                    <div style={{}} >
-                                                        <p style={{ fontWeight: "600", fontSize: "20px", textAlign: "center" }} >
-                                                            {lin.courseName}
-                                                        </p>
-                                                    </div>
-                                                    <p style={{ fontSize: "15px", textAlign: "center" }}>
-                                                        {lin.yoc}
-                                                    </p>
-                                                    <p style={{ fontSize: "15px", textAlign: "center" }}>
-                                                        {lin.rateYourSkill}
-                                                    </p>
-
-
-
-
-                                                </div>
-                                                // <div className='card--menu'>
-                                                //     <div>
-                                                //         <img  />
-                                                //     {lin.certificateLink}
-                                                //     </div>
-
-                                                //     <p style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}>
-                                                //     {lin.courseName}
-                                                //     </p>
-                                                //     <p style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
-                                                //     {lin.yoc}
-                                                //     </p>
-
-                                                //     <p>
-                                                //     {lin.rateYourSkill}
-                                                //     </p>
-
-                                                // </div>
-                                            )
-                                        })
-
-                                        }
-                                    </ScrollMenu>
-                                </div>
-                            )
-                    })
-                    }
-                </div>
-                <div className='resumeBtnBox'>
-                    <a className='resumeBtn' href={SuruResume} download>
-                        Download Resume
-                    </a>
-                </div>
-                <img
-                    src={GoBusyLogo}
-                    className='gobyLogo'
-                />
+                                }
+                            </ScrollMenu>    
+                        </div>    
+                    )
+                }) 
+                }
             </div>
+            <div className='resumeBtnBox'>
+                <a className='resumeBtn' href={SuruResume} download>
+                    Download Resume
+                </a>
+            </div>
+        </div>
         </div>
     )
 }
