@@ -40,3 +40,30 @@
     padding-left: 25px;
     padding-right: 25px;
 }
+
+.navbar-glass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #ff295f, #fc03b1, #4a03fc);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: 3s ease-in;
+    -moz-transition: 3s ease-in;
+    -o-transition: 3s ease-in;
+    transition: 3s ease-in;
+    animation-name: navbar-glass;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes navbar-glass {
+    from {
+        transform: translate(0px, -250px);
+    }
+    to {
+        transform: translate(0px, 0px);
+    }
+}

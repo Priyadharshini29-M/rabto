@@ -21,7 +21,7 @@ function Company() {
       
     const FloatingNavbar = () => {
         return(
-            <Disclosure as="nav" className="flex justify-center bg-gray-800" style={{ marginTop:50, borderRadius:55, marginRight:25, marginLeft:25 }}>
+            <Disclosure as="nav" className="flex justify-center bg-gray-800 navbar-glass" style={{ marginTop:25, borderRadius:55, marginRight:25, marginLeft:25 }}>
             {({ open }) => (
               <>
                 <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 floatnavbar">
