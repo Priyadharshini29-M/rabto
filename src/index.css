@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.floatnavbar {
+    padding-left: 25px;
+    padding-right: 25px;
+}

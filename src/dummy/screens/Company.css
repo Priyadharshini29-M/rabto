@@ -35,3 +35,8 @@
 .wrapper:hover .contents .inner {
     width: 100%;
 }
+
+.floatnavbar {
+    padding-left: 25px;
+    padding-right: 25px;
+}
