@@ -2,7 +2,13 @@ import React from 'react'
 
 function Company() {
   return (
-    <div>Company</div>
+    <div>Company
+
+<h1 className="text-3xl font-bold underline">
+      Happy Company
+    </h1>
+
+    </div>
   )
 }
 
