@@ -11,7 +11,6 @@ function Home() {
       homeText: {
         textAlign:'center'
       }
-    
   }
 
   return (

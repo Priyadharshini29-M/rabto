@@ -1,0 +1,130 @@
+.imgBox {
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+}
+
+
+
+.usernameTxt {
+    font-family: 'Khula', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.userbioTxt {
+    font-family: 'Khula', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.btn--dis {
+    background: #F4F4F4;
+    background-image: -webkit-linear-gradient(top, #F4F4F4, #F4F4F4);
+    background-image: -moz-linear-gradient(top, #F4F4F4, #F4F4F4);
+    background-image: -ms-linear-gradient(top, #F4F4F4, #F4F4F4);
+    background-image: -o-linear-gradient(top, #F4F4F4, #F4F4F4);
+    background-image: linear-gradient(to bottom, #F4F4F4, #F4F4F4);
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #000;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 50px 12px 50px;
+    text-decoration: none;
+  }
+
+.card--menu{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 30px;
+    min-width: 200px;
+}
+
+.userprofileImg {
+    filter: drop-shadow(0 0 0.75rem rgb(45, 45, 45));
+}
+
+.usernameTxtBox {
+    display: flex;
+    justify-content: center;
+}
+.cert--img{
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 20px;
+}
+
+.usernameBioTxt {
+    margin-top: -15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.usernameSocialIcon {
+    margin: 5px;
+    margin-left: 18px;
+}
+
+.usernameSocialIconBox {
+    text-align: center;
+}
+
+.gobyLogo {
+    top: 50%;
+    left: 50%;
+    height: 35px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.resumeBtnBox {
+    width: 70%;
+    height: 45px;
+    background-color: #3ECC66;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 50px auto auto auto ;
+
+}
+
+.resumeBtn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: larger;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile--avatar{
+    position: relative;
+    animation-name: profileMove;
+    animation-duration: 0.6s;
+}
+@keyframes profileMove {
+    0%   {opacity: 0.1; left:0px; top:500px;}
+    25%  {opacity: 0.3; left:0px;}
+    50%  {opacity: 0.4; left:0px;}
+    75%  {opacity: 0.6; left:0px; top:-10px}
+    100% {opacity: 1; left:0px; top:0px;}
+  }
