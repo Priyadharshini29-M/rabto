@@ -78,12 +78,36 @@
 }
 
 .wa-button-img{
-    width: 15rem;
+    width: 12rem;
 }
 
-/* @media screen() {
-    
-} */
+.call-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 35px;
+    border-radius: 8px;
+    background-color: #000;
+    margin-bottom: 4px;
+    text-decoration: none;
+    font-weight: bold ;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: medium;
+}
+.a .call-btn .visited{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 470px) {
+    .call-btn{
+        font-size: small;
+        padding: 7px 25px;
+    }
+    .wa-button-img{
+        width: 8rem;
+    }
+}
 
 .usernameBioTxt {
     margin-top: -15px;
