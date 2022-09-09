@@ -98,7 +98,7 @@ export default function Username(props) {
                         </h3>
                     </Fade>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "15px 0"}}>
-                    <a href="tel://919845318077">call us!</a>
+                    <a href="tel://919845318077">call</a>
                     <a aria-label="Chat on WhatsApp" href={`https://wa.me/91${data.userBio.whatsappNumber}`} > <img className="wa-button-img" src={WhatsappButton} /></a>
                     </div>
                     <div style={{ width: '100%' }}>
