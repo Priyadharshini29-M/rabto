@@ -1,21 +1,28 @@
-import React from 'react';
-import './username.css';
-import LogoIcon from '../assets/logos/verified.svg';
+import React from 'react'
+import './username.css'
+import LogoIcon from '../assets/logos/verified.svg'
 import { Box } from '@mui/material';
-import InstagramIcon from '../assets/logos/instagram.svg';
-import FaceBookIcon from '../assets/logos/facebook.svg';
-import DribbleIcon from '../assets/logos/dribbble.svg';
-import BehanceIcon from '../assets/logos/behance.svg';
-import {Fade, Slide} from "react-reveal";
-import LinkedInIcon from '../assets/logos/linkedin-in.svg';
-import TwitterIcon from '../assets/logos/twitter.svg';
+import InstagramIcon from '../assets/logos/instagram.svg'
+import FaceBookIcon from '../assets/logos/facebook.svg'
+import DribbleIcon from '../assets/logos/dribbble.svg'
+import BehanceIcon from '../assets/logos/behance.svg'
+import LinkedInIcon from '../assets/logos/linkedin-in.svg'
+import TwitterIcon from '../assets/logos/twitter.svg'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
-import SuruResume from '../assets/logos/resume/suru.pdf';
-import GoBusyLogo from '../assets/logos/gobylogo.png';
+import SuruResume from '../assets/logos/resume/suru.pdf'
+import GoBusyLogo from '../assets/logos/gobylogo.png'
+import { Link } from 'react-router-dom';
+import { fontSize } from '@mui/system';
+import { Fade } from 'react-reveal';
+import { Slide } from 'react-reveal';
+import  Reveal  from 'react-reveal/Reveal';
 
 export default function Username(props) {
 
+
+
     const data = props.data;
+
 
     const styles = {
         mainLayout: {
@@ -48,39 +55,48 @@ export default function Username(props) {
         }
     }
 
-  return (
-    <div style={styles.mainLayout}>  
-        <div>
-            <div style={{backgroundColor:"#F4F4F4"}}>
-            <img
-                src={data.userBio.profile}
-                className='imgBox userprofileImg'
-                
-            />
-         
-            <div className='usernameTxtBox'>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row'
-        }}
-        >
-        <h2 style={styles.textStruct} className='usernameTxt'>
-        {data.userBio.name}
-        </h2>
-        <img
-        style={{
-            height:23,
-            width:25,
-            marginTop: 30,
-            marginLeft: 15.5
-        }}
-        src={LogoIcon}
-        />
-      </Box>
-    
-      </div>
-            {/* <h3 style={styles.textStruct}>
+    return (
+        <div style={styles.mainLayout}>
+            <div style={{
+
+
+            }}>
+                <div style={{ backgroundColor: "#414453", color: "#fff" }}>
+                    <div className="profile--avatar">
+                        <img
+                            src={data.userBio.profile}
+                            className='imgBox userprofileImg'
+
+                        />
+                    </div>
+
+                    <div className='usernameTxtBox'>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'row'
+                            }}
+                        >
+                            <div effect="fadeInUp" bottom >
+                                <h2 style={styles.textStruct} className='usernameTxt'>
+                                    {data.userBio.name}
+                                </h2>
+                            </div>
+
+                            <img
+                                style={{
+                                    height: 23,
+                                    width: 25,
+                                    marginTop: 30,
+                                    marginLeft: 15.5
+                                }}
+                                src={LogoIcon}
+                            />
+
+                        </Box>
+
+                    </div>
+                    {/* <h3 style={styles.textStruct}>
                 @{data.userBio.userName}
             </h3> */}
                     <Fade bo effect="fadeInUp">
@@ -137,8 +153,8 @@ export default function Username(props) {
                                         }}>
                                             {item.links.map((lin, index) => {
                                                 return (
-                                                    <div style={{padding:"15px 0"}}>
-                                                        <div className='card--menu'>
+                                                    <div style={{}}>
+                                                        <div className='card--menu'>2
                                                             <div>
                                                                 <img src={lin.image} />
                                                             </div>
@@ -184,7 +200,6 @@ export default function Username(props) {
                                     }}>
                                 {item.links.map((lin, index) => {
                                     return(
-                                        <div style={{padding:"15px 0"}}>
                                         <div className='card--menu'>
                                             <p 
                                                  style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
@@ -203,7 +218,6 @@ export default function Username(props) {
                                             </button>
                                             
                                         </div>
-                                        </div>
                                     )
                                 }) 
 
@@ -221,7 +235,6 @@ export default function Username(props) {
                             <ScrollMenu>
                                 {item.links.map((lin, index) => {
                                     return(
-                                        <div style={{padding:"15px 0"}}>
                                         <div className='card--menu'>
                                             <div>
                                                 <img className='cert--img' src={lin.certificateLink} />
@@ -241,7 +254,6 @@ export default function Username(props) {
                                         
                                             
                                             
-                                        </div>
                                         </div>
                                         // <div className='card--menu'>
                                         //     <div>
