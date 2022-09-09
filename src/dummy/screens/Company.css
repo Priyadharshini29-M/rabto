@@ -61,8 +61,7 @@
 
 @keyframes navbar-glass {
     from {
-        /* transform: translate(0px, -250px); */
-        transform: width 2s, height 4s;
+        transform: translate(0px, 50px);
     }
     to {
         transform: translate(0px, 0px);
