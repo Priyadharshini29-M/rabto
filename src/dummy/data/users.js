@@ -1,4 +1,4 @@
- const userData = [{
+ export const userData = [{
     userBio: {
         name: "DJ Sri Vigneshwar",
         userName: "vicky",
@@ -231,6 +231,7 @@ export const buserData = [{
     userBio: {
         name: "Surinther Raja",
         userName: "suren",
+        whatsappNumber: "9845318077",
         position: "CEO @goby.in",
         bio: "Loud Introvert with big mission Fiercely local but available worldwide",
         email: "testtheDot@gmail.com",

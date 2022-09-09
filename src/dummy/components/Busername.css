@@ -77,6 +77,14 @@
     border-radius: 20px;
 }
 
+.wa-button-img{
+    width: 15rem;
+}
+
+/* @media screen() {
+    
+} */
+
 .usernameBioTxt {
     margin-top: -15px;
     margin-right: 20px;

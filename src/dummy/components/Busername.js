@@ -12,6 +12,7 @@ import TwitterIcon from '../assets/logos/twitter.svg';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import SuruResume from '../assets/logos/resume/suru.pdf';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
+import WhatsappButton from "../../assets/WhatsAppButtonGreenSmall.png"
 
 //tempAssets
 import BusinessLogo from "../../assets/download.png"
@@ -96,6 +97,10 @@ export default function Username(props) {
                             {data.userBio.bio}
                         </h3>
                     </Fade>
+                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "15px 0"}}>
+                    <a href="tel://919845318077">call us!</a>
+                    <a aria-label="Chat on WhatsApp" href={`https://wa.me/91${data.userBio.whatsappNumber}`} > <img className="wa-button-img" src={WhatsappButton} /></a>
+                    </div>
                     <div style={{ width: '100%' }}>
                         <Slide bottom duration={1000}>
                         <Box
