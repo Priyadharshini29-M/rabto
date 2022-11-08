@@ -12,7 +12,7 @@ function Profile() {
     const userFilterData = buserData.filter(i => i.userBio.userName === username);
     if(userFilterData[0])
     return (
-            <Busername data={userFilterData[0]}/>
+            <Username data={userFilterData[0]}/>
     )
     else
     return (
