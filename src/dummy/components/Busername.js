@@ -13,6 +13,7 @@ import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import SuruResume from '../assets/logos/resume/suru.pdf';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
 import {TbMinusVertical} from "react-icons/tb"
+import dotlogo from "../../assets/dotlogo.png";
 import WhatsappButton from "../../assets/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
 
@@ -62,7 +63,7 @@ export default function Username(props) {
             <div style={{backgroundColor:"#F4F4F4"}}>
                 <div className='logo--cont'>
                 <img
-                src={BusinessLogo}
+                src={dotlogo}
                 className='business-logo'
                 
             />

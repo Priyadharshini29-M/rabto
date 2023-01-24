@@ -78,7 +78,7 @@
         name: "Surinther Raja",
         userName: "suren",
         position: "CEO @goby.in",
-        bio: "Loud Introvert with big mission Fiercely local but available worldwide",
+        bio: "A growth hack company which helps your business grow dif",
         email: "testtheDot@gmail.com",
         age: "21",
         resumeurl: "www.google.com",
