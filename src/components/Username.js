@@ -9,7 +9,6 @@ import BehanceIcon from '../assets/logos/behance.svg'
 import LinkedInIcon from '../assets/logos/linkedin-in.svg'
 import TwitterIcon from '../assets/logos/twitter.svg'
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
-import SuruResume from '../assets/logos/resume/suru.pdf'
 import GoBusyLogo from '../assets/logos/gobylogo.png'
 import { Link } from 'react-router-dom';
 import { fontSize } from '@mui/system';
@@ -284,7 +283,7 @@ export default function Username(props) {
                 }
             </div>
             <div className='resumeBtnBox'>
-                <a className='resumeBtn' href={SuruResume} download>
+                <a className='resumeBtn'>
                     Download Resume
                 </a>
             </div>

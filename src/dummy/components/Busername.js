@@ -10,63 +10,40 @@ import {Fade, Slide} from "react-reveal";
 import LinkedInIcon from '../assets/logos/linkedin-in.svg';
 import TwitterIcon from '../assets/logos/twitter.svg';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
-import SuruResume from '../assets/logos/resume/suru.pdf';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
 import {TbMinusVertical} from "react-icons/tb"
-import dotlogo from "../../assets/dotlogo.png";
-import WhatsappButton from "../../assets/WhatsAppButtonGreenSmall.png"
+import dotlogo from "../../assets/images/dotlogored.png";
+import ReactRoundedImage from "react-rounded-image";
+import WhatsappButton from "../../assets/images/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
 
 //tempAssets
-import BusinessLogo from "../../assets/download.png"
+import BusinessLogo from "../../assets/images/download.png"
 import { Container } from '@mui/system';
+
+
+
 
 export default function Username(props) {
 
     const data = props.data;
-
-    const styles = {
-        mainLayout: {
-            width: '100%',
-            height: '100%',
-            backgroundColor: '#FFFFFF'
-        },
-        textStruct: {
-            textAlign: 'center',
-        },
-        folderStruct: {
-            backgroundColor: '#fff',
-            borderRadius: 8,
-            padding: 5
-        },
-        folderFormat: {
-            marginBottom: 10,
-            marginTop: 20
-        },
-        folderTxt: {
-            fontSize: 18,
-        },
-        folderStructure: {
-            padding: 10
-        },
-        resumeBtn: {
-            width: '80%',
-            height: 55,
-            backgroundColor: '#3ECC66'
-        }
-    }
-
   return (
-    <Container>
-    <div style={styles.mainLayout}>  
+    
+    <div >  
         <div>
-            <div style={{backgroundColor:"#F4F4F4"}}>
+            <div style={{backgroundColor:"#F4F4F4", marginTop: -8, marginRight: -8, marginLeft: -8}}>
+        <Container>
+            <div style={{backgroundColor:"#F4F4F4", paddingBottom:"10px", paddingTop: "10px", borderRadius: "7px"}}>
                 <div className='logo--cont'>
-                <img
-                src={dotlogo}
-                className='business-logo'
+                <ReactRoundedImage
+                image={dotlogo}
+                imageWidth="100"
+                imageHeight="100"
+                roundedSize="0"
+                borderRadius="100"
+                />
                 
-            />
+            
                 </div>
             
          
@@ -77,14 +54,14 @@ export default function Username(props) {
           flexDirection: 'row'
         }}
         >
-        <h2 style={styles.textStruct} className='usernameTxt'>
+        <h2  className='usernameTxt gilroyBold'>
         the Dot Tech
         </h2>
         <img
         style={{
             height:23,
             width:25,
-            marginTop: 30,
+            marginTop: 31,
             marginLeft: 15.5
         }}
         src={LogoIcon}
@@ -96,16 +73,16 @@ export default function Username(props) {
                 @{data.userBio.userName}
             </h3> */}
                     <Fade bo effect="fadeInUp">
-                        <h3 className='userbioTxt usernameBioTxt'>
+                        <h3 className='userbioTxt usernameBioTxt gilroy'>
                             {data.userBio.bio}
                         </h3>
                     </Fade>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "15px 0"}}>
                     <div style={{marginRight: "15px"}}>
-                    <a href="tel://919845318077">
-                        <button className='call-btn' style={{textDecoration: "none"}}>
+                    <a style={{textDecoration: "none"}} href="tel://919845318077">
+                        <button className='call-btn gilroy' style={{cursor: "pointer"}}>
                         <FaPhoneAlt style={{marginRight: "8px"}} />
-                            Call
+                           <div>Call</div> 
                         </button>
                         </a>
                         </div>
@@ -132,6 +109,8 @@ export default function Username(props) {
                         </Slide>
                     </div>
                 </div>
+                </Container>
+                </div>
                 {/* <h3 style={styles.textStruct}>
             {data.userBio.email}
             </h3>
@@ -141,32 +120,35 @@ export default function Username(props) {
                 <div>
 
                 </div>
-                <div style={styles.folderStruct}>
+                <div style={{marginTop: -8, marginRight: -8, marginLeft: -8}}>
+                <div>
                     {data.userLinks && data.userLinks.map((item, index) => {
-                        if (item.title === 'Portfolio')
+                        if (item.id === 1)
                             return (
                                 <div>
-                                    <div style={styles.folderFormat}>
+                                    <div>
                                         <h3 style={{
-
+                                            fontWeight: 'bolder',
                                             marginLeft: 20,
                                             fontSize: "23px"
-                                        }}>
+                                        }}
+                                        className="gilroyBold"
+                                        >
                                             {item.title}
                                         </h3>
                                         <ScrollMenu style={{
                                             // backgroundColor: '#848484',
-
+                                            display: "flex",
                                         }}>
                                             {item.links.map((lin, index) => {
                                                 return (
                                                     <div style={{padding:"15px 0"}}>
                                                         <div className='card--menu'>
                                                             <div>
-                                                                <img src={lin.image} style={{ width: "100%"}} />
+                                                                <img src={lin.image} style={{ width: "100%", borderRadius: "23px"}} />
                                                             </div>
                                                             <div style={{}} >
-                                                                <p style={{ fontWeight: "600", fontSize: "20px", textAlign: "center" }} >
+                                                                <p style={{ fontWeight: "600", fontSize: "20px", textAlign: "center" }} className="gilroyBold">
                                                                     {lin.heading}
                                                                 </p>
                                                             </div>
@@ -174,7 +156,7 @@ export default function Username(props) {
                                                                 {lin.description}
                                                             </p>
 
-                                                            <button onClick={() => window.open(lin.url, "_blank")} className='btn--dis'>
+                                                            <button onClick={() => window.open(lin.url, "_blank")} className='btn--dis' style={{cursor: "pointer"}}>
                                                                 DISCOVER
                                                             </button>
 
@@ -192,9 +174,8 @@ export default function Username(props) {
                             )
                         if (item.title === 'Education')
                             return (
-                                <div style={styles.folderFormat}>
+                                <div >
                                     <h3 style={{
-
                                         marginLeft: 20,
                                         fontSize: "23px"
                                     }}>
@@ -207,7 +188,7 @@ export default function Username(props) {
                                     }}>
                                 {item.links.map((lin, index) => {
                                     return(
-                                        <div style={{padding:"15px 0"}}>
+                                        <div style={{padding:"15px 0", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
                                         <div className='card--menu'>
                                             <p 
                                                  style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
@@ -236,7 +217,7 @@ export default function Username(props) {
                     )
                     if(item.title === 'Certifications')
                     return(
-                        <div style={styles.folderFormat}>
+                        <div>
                             <h3 style={{marginLeft:"20px", fontSize:"23px"}}>
                                 {console.log('item ',item)}
                          {item.title}
@@ -294,13 +275,13 @@ export default function Username(props) {
                 }) 
                 }
             </div>
+            </div>
             <div className='resumeBtnBox'>
-                <a className='resumeBtn' href={SuruResume} download>
-                    Download Resume
+                <a className='resumeBtn' >
+                    Download Brochure
                 </a>
             </div>
         </div>
         </div>
-        </Container>
     )
 }
