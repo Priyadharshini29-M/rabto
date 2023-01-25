@@ -4,11 +4,31 @@ import Busername from '../components/Busername';
 import Username from '../components/Username';
 
 import { buserData } from '../data/users';
+import { useEffect, useState } from 'react';
 
 
 function Profile() {
 
     const {username} = useParams();
+
+    const getUserProfile = (username) => {
+        axios.get('/user?ID=12345')
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                .then(function () {
+                });
+    }
+
+    useEffect(() => {
+        
+    }, [])
+    
+
+
     const userFilterData = buserData.filter(i => i.userBio.userName === username);
     if(userFilterData[0])
     return (
