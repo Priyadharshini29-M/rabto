@@ -57,3 +57,55 @@ export const buserData = [{
     ]
 }]
 
+export const userData = [{
+    userBio: {
+        name: "Surendhar",
+        userName: "suren",
+        whatsappNumber: "9845318077",
+        position: "CEO @goby.in",
+        bio: "Loud Introvert with big mission Fiercely local but available worldwide",
+        email: "testtheDot@gmail.com",
+        age: "21",
+        resumeurl: "www.google.com",
+        links: {
+            instagram: "https://www.instagram.com/dot_corporate/",
+            fb: "https://www.facebook.com/profile.php?id=100078201942993",
+            dribble: "https://dribbble.com/surintherraja",
+            behance: "https://www.behance.net/warrenpeaceweb",
+            linkedin: "https://www.linkedin.com/in/surinther-raja-s-7370b1125/",
+            twitter: "https://twitter.com/theDot_tech"
+        },
+    },
+    userLinks: [{
+            id: 1,
+            title: "Social Media Marketing",
+            links: [{
+                    heading: "Bangs",
+                    description: "Elevating A Luxury Beauty Salon's specialised services in Social Media Platform.",
+                    url: "https://instagram.com/bangssalon_rspuram?igshid=YmMyMTA2M2Y=",
+                    image: bangs
+                },
+                {
+                    heading: "The H World",
+                    description: "Crafting a Mens Herbal Hair Care brand in the social media space with great branding and unique identity.",
+                    url: "https://instagram.com/the_h_world_india?igshid=YmMyMTA2M2Y=",
+                    image: hworld
+                },
+                {
+                    heading: "Coimbatore Biriyani Eatery",
+                    description: "Developing a restaurant's social media profile and a strong online reputation to captivate the audience.",
+                    url: "https://instagram.com/cbe_coimbatore_briyani_eatery?igshid=YmMyMTA2M2Y=",
+                    image: cbe
+                },
+                {
+                    heading: "Nannir",
+                    description: "Dealing an agricultural patent product company to drive business and boost conversions across PAN India.",
+                    url: "https://instagram.com/nannir_energizer?igshid=YmMyMTA2M2Y=",
+                    image: nannir
+                }
+            ]
+        }
+
+    ]
+}]
+

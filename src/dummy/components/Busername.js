@@ -12,15 +12,14 @@ import TwitterIcon from '../assets/logos/twitter.svg';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
 import {TbMinusVertical} from "react-icons/tb"
+import enterprise from "../../assets/images/enterprise.png"
 import dotlogo from "../../assets/images/dotlogored.png";
-import ReactRoundedImage from "react-rounded-image";
 import WhatsappButton from "../../assets/images/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
-
 //tempAssets
 import BusinessLogo from "../../assets/images/download.png"
 import { Container } from '@mui/system';
-
+import {MdCorporateFare} from "react-icons/md"
 
 
 
@@ -35,15 +34,11 @@ export default function Username(props) {
         <Container>
             <div style={{backgroundColor:"#F4F4F4", paddingBottom:"10px", paddingTop: "10px", borderRadius: "7px"}}>
                 <div className='logo--cont'>
-                <ReactRoundedImage
-                image={dotlogo}
-                imageWidth="100"
-                imageHeight="100"
-                roundedSize="0"
-                borderRadius="100"
-                />
+                <img
+                src={dotlogo}
+                className='business-logo'
                 
-            
+            />
                 </div>
             
          
@@ -66,6 +61,16 @@ export default function Username(props) {
         }}
         src={LogoIcon}
         />
+        <img
+        style={{
+            height:23,
+            width:25,
+            marginTop: 31,
+            marginLeft: 15.5
+        }}
+        src={enterprise}
+        />
+        
       </Box>
     
       </div>
@@ -276,11 +281,11 @@ export default function Username(props) {
                 }
             </div>
             </div>
-            <div className='resumeBtnBox'>
+            {/* <div className='resumeBtnBox'>
                 <a className='resumeBtn' >
                     Download Brochure
                 </a>
-            </div>
+            </div> */}
         </div>
         </div>
     )
