@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import InstagramIcon from '../assets/logos/instagram.svg';
 import FaceBookIcon from '../assets/logos/facebook.svg';
 import DribbleIcon from '../assets/logos/dribbble.svg';
+import web from '../assets/logos/web.svg';
 import BehanceIcon from '../assets/logos/behance.svg';
 import {Fade, Slide} from "react-reveal";
 import LinkedInIcon from '../assets/logos/linkedin-in.svg';
@@ -12,10 +13,11 @@ import TwitterIcon from '../assets/logos/twitter.svg';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
 import { Container } from '@mui/system';
-import enterprise from "../../assets/images/enterprise.png"
+import bni from "../../assets/images/bni.png"
 import dotlogo from "../../assets/images/suren.jpeg";
 import WhatsappButton from "../../assets/images/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
+import {MdOutlineBusinessCenter} from "react-icons/md"
 
 export default function Username(props) {
 
@@ -59,12 +61,11 @@ export default function Username(props) {
     />
     {/* <img
     style={{
-        height:23,
-        width:25,
+        width: "10px",
         marginTop: 31,
         marginLeft: 15.5
     }}
-    src={enterprise}
+    src={bni}
     /> */}
     
   </Box>
@@ -77,8 +78,13 @@ export default function Username(props) {
                     <h3 className='userbioTxt usernameBioTxt gilroy'>
                         {data.userBio.bio}
                     </h3>
+                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "10px", marginTop: "-20px"}}>
+                    <img style={{width: "40px"}} src={bni}/>
+                    <h4 className='gilroyBold'>STALWARTS</h4>
+                    <p className="gilroy">(member)</p>
+                    </div>
                 </Fade>
-                <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "15px 0"}}>
+                <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "0 0 15px 0"}}>
                 <div style={{marginRight: "15px"}}>
                 <a style={{textDecoration: "none"}} href="tel://919845318077">
                     <button className='call-btn gilroy' style={{cursor: "pointer"}}>
@@ -100,6 +106,7 @@ export default function Username(props) {
                         // }}
                         className='usernameSocialIconBox'
                     >
+                        <img onClick={() => window.open(data.userBio.links.goby, "_blank")} src={web}  style={{width: "22px"}} className='busernameSocialIcon' />
                         <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' />
                         {/* <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='busernameSocialIcon' /> */}
                         <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='busernameSocialIcon' />

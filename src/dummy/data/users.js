@@ -68,6 +68,7 @@ export const userData = [{
         age: "21",
         resumeurl: "www.google.com",
         links: {
+            goby: "https://www.goby.in/thedottech",
             instagram: "https://www.instagram.com/dot_corporate/",
             fb: "https://www.facebook.com/profile.php?id=100078201942993",
             dribble: "https://dribbble.com/surintherraja",
