@@ -5,6 +5,7 @@ import Username from '../components/Username';
 
 import { buserData } from '../data/users';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 function Profile() {
