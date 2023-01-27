@@ -8,6 +8,7 @@ import './index.css'
 import PrivateRoute from './dummy/routes/PrivateRoutes';
 import Tools from './dummy/screens/Tools';
 import Company from './dummy/screens/Company';
+import Personal from './dummy/components/Personal';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/admin" element={<Dash />} />
         <Route path="/tools" element={<Tools />} />
         <Route path="/thedot_tech" element={<Company />} />
+        <Route path="/personal" element={<Personal />} />
       </Routes>
     </Router>
   );
