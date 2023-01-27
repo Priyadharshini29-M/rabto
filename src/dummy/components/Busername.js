@@ -34,11 +34,15 @@ export default function Username(props) {
         <Container>
             <div style={{backgroundColor:"#F4F4F4", paddingBottom:"10px", paddingTop: "10px", borderRadius: "7px"}}>
                 <div className='logo--cont'>
-                <img
-                src={dotlogo}
-                className='business-logo'
+                <ReactRoundedImage
+                image={data.userBio.profile}
+                imageWidth="100"
+                imageHeight="100"
+                roundedSize="0"
+                borderRadius="100"
+                />
                 
-            />
+            
                 </div>
             
          
