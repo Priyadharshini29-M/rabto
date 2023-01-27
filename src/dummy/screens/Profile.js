@@ -4,13 +4,9 @@ import Busername from '../components/Busername';
 import Username from '../components/Username';
 
 import { buserData } from '../data/users';
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-=======
-import { userData } from '../data/users';
->>>>>>> a7bd931b9f7510c3a37110b2c3ec6a9995876350
 
 function Profile() {
 

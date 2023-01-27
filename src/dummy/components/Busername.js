@@ -34,19 +34,9 @@ export default function Username(props) {
         <Container>
             <div style={{backgroundColor:"#F4F4F4", paddingBottom:"10px", paddingTop: "10px", borderRadius: "7px"}}>
                 <div className='logo--cont'>
-<<<<<<< HEAD
-                <ReactRoundedImage
-                image={data.userBio.profile}
-                imageWidth="100"
-                imageHeight="100"
-                roundedSize="0"
-                borderRadius="100"
-                />
-=======
                 <img
                 src={dotlogo}
                 className='business-logo'
->>>>>>> a7bd931b9f7510c3a37110b2c3ec6a9995876350
                 
             />
                 </div>
@@ -291,16 +281,11 @@ export default function Username(props) {
                 }
             </div>
             </div>
-<<<<<<< HEAD
             <div className='resumeBtnBox'>
                 <a href={data.userBio.brochure_link} className='resumeBtn' download>
-=======
-            {/* <div className='resumeBtnBox'>
-                <a className='resumeBtn' >
->>>>>>> a7bd931b9f7510c3a37110b2c3ec6a9995876350
                     Download Brochure
                 </a>
-            </div> */}
+            </div> 
         </div>
         </div>
     )
