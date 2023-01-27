@@ -27,6 +27,8 @@
 }
 .business-logo{
     max-width: 100px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;   
 }
 
 .logo--cont{
@@ -101,7 +103,7 @@
 @media screen and (max-width: 470px) {
     .call-btn{
         font-size: small;
-        padding: 6px 25px;
+        padding: 6.5px 38px;
     }
     .wa-button-img{
         width: 8rem;
