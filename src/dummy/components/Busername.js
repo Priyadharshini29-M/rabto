@@ -16,6 +16,8 @@ import enterprise from "../../assets/images/enterprise.png"
 import dotlogo from "../../assets/images/dotlogored.png";
 import WhatsappButton from "../../assets/images/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
+import ReactRoundedImage from "react-rounded-image";
+
 //tempAssets
 import BusinessLogo from "../../assets/images/download.png"
 import { Container } from '@mui/system';
