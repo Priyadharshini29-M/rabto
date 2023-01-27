@@ -3,7 +3,11 @@ import "./Busername.css";
 import cover from "../../assets/images/cover.png"
 import dotlogo from "../../assets/images/suren.jpeg";
 import LogoIcon from '../assets/logos/verified.svg';
-
+import InstagramIcon from '../assets/logos/instagram.svg';
+import FaceBookIcon from '../assets/logos/facebook.svg';
+import LinkedInIcon from '../assets/logos/linkedin-in.svg';
+import { Box } from "@mui/system";
+import goby from "../../assets/images/gobylogo.png"
 
 function Personal() {
     return(
@@ -39,6 +43,23 @@ Fiercely local but available worldwide
                 <button className="per-links-btn">add me to</button>
                 <button className="per-links-btn">add me to</button>
             </div>
+            <Box
+                        // sx={{
+                        //   display: 'flex',
+                        //   flexWrap: 'nowrap',
+                        //   bgcolor: 'background.paper',
+                        //   borderRadius: 1,
+                        // }}
+                        className='usernameSocialIconBox'
+                    >
+                        <img src={InstagramIcon} style={{}} className='busernameSocialIcon' />
+                        <img src={FaceBookIcon} className='busernameSocialIcon' />
+                        <img  src={LinkedInIcon} className='busernameSocialIcon' />
+                        {/* <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='busernameSocialIcon' /> */}
+                    </Box>
+                    <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                        <img src={goby} style={{width: "80px", marginTop: "20px"}} />
+                    </div>
             </div>
             
         </>
