@@ -198,3 +198,52 @@ body{
 .gilroyBold{
     font-family: "GilroyBold", sans-serif;
 }
+
+/* personal */
+/* personal */
+/* personal */
+
+.cover-img{
+    width: 100%;
+    z-index: -5;
+    position: relative;
+}
+
+.rounded-cont{
+    background-color: #fff;
+    margin-top: -63px;
+    z-index: 10;
+    border-radius: 55px 55px 0px 0px;
+}
+
+.personal-logo{
+    max-width: 100px;
+    border-radius: 100px;
+    margin-top: -48px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;   
+}
+
+.per-bio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.per-links-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    
+}
+.per-links-btn{
+    margin-bottom: 20px;
+    padding: 13px 130px;
+    border: none;
+    font-family: "Gilroy";
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: large;
+    box-shadow: rgba(99, 99, 99, 0.19) 0px 10px 20px, rgba(83, 83, 83, 0.23) 0px 6px 6px;
+}
