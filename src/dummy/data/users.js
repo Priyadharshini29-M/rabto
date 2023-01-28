@@ -165,7 +165,7 @@ export const buserData = [{
         email: "snow.flakes@gmail.com",
         age: "40",
         resumeurl: "www.google.com",
-        brochure_link: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2F7e59c65e-9f39-4f85-89f7-c275a42ada30WhatsApp%20Image%202023-01-24%20at%2012.58.01%20PM.jpeg?alt=media&token=6f13c450-e402-4b4e-b7e6-aa0605716c51",
+        brochure_link: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2Fe4fcb907-1818-4e9a-a4fd-cb78cfe475c4WhatsApp%20Image%202023-01-27%20at%2011.53.40%20PM.jpeg?alt=media&token=c791018e-d7b1-4188-9a6d-8f2101fab75c",
         profile: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2Fe1b66ba4-dc5e-4bad-a4a4-77690902753bScreenshot%202023-01-28%20004630.png?alt=media&token=659db68b-72a5-4046-8838-8917f1339a31",
         links: {
             instagram: "https://www.instagram.com/kk_bobevents/",
@@ -180,7 +180,7 @@ export const buserData = [{
             id: 1,
             title: "About Us",
             links: [{
-                heading: "Home Interior",
+                heading: "Snow Flakes",
                 description: "100% Pure and Organic Cotton | Soft and Comfortable | No Chemical Dyes | WWAC Safe Zipper | Sustainable Clothing",
                 url: "https://www.instagram.com/snowflakes.clothing/",
                 image: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2F1cef73bf-7e7b-4c8d-9487-293626d493cf2995d9bb34bca2807b6b8d66b9dc221c%402x.png?alt=media&token=ac88f6c7-1483-4af1-8dcf-84ccf26f6436"
