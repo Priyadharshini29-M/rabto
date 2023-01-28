@@ -90,7 +90,7 @@ export default function Username(props) {
                     </Fade>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "15px 0"}}>
                     <div style={{marginRight: "15px"}}>
-                    <a style={{textDecoration: "none"}} href="tel://919845318077">
+                    <a style={{textDecoration: "none"}} href={`tel://91${data.userBio.bio}`}>
                         <button className='call-btn gilroy' style={{cursor: "pointer"}}>
                         <FaPhoneAlt style={{marginRight: "8px"}} />
                            <div>Call</div> 
