@@ -168,8 +168,8 @@ export const buserData = [{
         brochure_link: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2Fe4fcb907-1818-4e9a-a4fd-cb78cfe475c4WhatsApp%20Image%202023-01-27%20at%2011.53.40%20PM.jpeg?alt=media&token=c791018e-d7b1-4188-9a6d-8f2101fab75c",
         profile: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2Fe1b66ba4-dc5e-4bad-a4a4-77690902753bScreenshot%202023-01-28%20004630.png?alt=media&token=659db68b-72a5-4046-8838-8917f1339a31",
         links: {
-            instagram: "https://www.instagram.com/kk_bobevents/",
-            fb: "https://www.facebook.com/profile.php?name=KK&BOB",
+            instagram: "https://www.instagram.com/snowflakes.clothing/",
+            fb: "https://www.facebook.com/",
             dribble: "",
             behance: "",
             linkedin: "",
