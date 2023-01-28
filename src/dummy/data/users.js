@@ -121,8 +121,8 @@ export const buserData = [{
         brochure_link: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2F7e59c65e-9f39-4f85-89f7-c275a42ada30WhatsApp%20Image%202023-01-24%20at%2012.58.01%20PM.jpeg?alt=media&token=6f13c450-e402-4b4e-b7e6-aa0605716c51",
         profile: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2Ff6fab81c-69a5-4174-9e08-10fb82d78ca3WhatsApp%20Image%202023-01-28%20at%2012.20.48%20AM.jpeg?alt=media&token=202f0283-25aa-4cc4-b57d-7bc5d2dcb1ae",
         links: {
-            instagram: "https://www.instagram.com/kk_bobevents/",
-            fb: "https://www.facebook.com/profile.php?name=KK&BOB",
+            instagram: "https://www.instagram.com/",
+            fb: "https://www.facebook.com/",
             dribble: "",
             behance: "",
             linkedin: "",
