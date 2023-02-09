@@ -60,9 +60,8 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 10px;
     margin: 0 20px;
-    border-radius: 30px;
-    min-width: 200px;
-    max-width: 300px;
+    border-radius: 5px;
+    
 }
 
 .userprofileImg {
@@ -246,4 +245,17 @@ body{
     font-weight: 900;
     font-size: large;
     box-shadow: rgba(99, 99, 99, 0.19) 0px 10px 20px, rgba(83, 83, 83, 0.23) 0px 6px 6px;
+}
+
+/* card css */
+/* card css */
+/* card css */
+
+.card-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    border-radius: 5px;
+    background-color: #CFD2CF;
 }

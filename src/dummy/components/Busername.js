@@ -28,7 +28,7 @@ export default function Username(props) {
     const data = props.data;
   return (
     
-    <div >  
+    <div>  
         <div>
             <div style={{backgroundColor:"#F4F4F4", marginTop: -8, marginRight: -8, marginLeft: -8}}>
         <Container>

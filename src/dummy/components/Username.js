@@ -13,10 +13,11 @@ import TwitterIcon from '../assets/logos/twitter.svg';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import GoBusyLogo from '../assets/logos/gobylogo.png';
 import { Container } from '@mui/system';
-import bni from "../../assets/images/bni.png"
+import bni from "../../assets/images/proudbni.png"
 import dotlogo from "../../assets/images/suren.jpeg";
 import WhatsappButton from "../../assets/images/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
+import ReactReadMoreReadLess from "react-read-more-read-less"
 import {MdOutlineBusinessCenter} from "react-icons/md"
 
 export default function Username(props) {
@@ -78,10 +79,9 @@ export default function Username(props) {
                     <h3 className='userbioTxt usernameBioTxt gilroy'>
                         {data.userBio.bio}
                     </h3>
-                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "10px", marginTop: "-20px"}}>
-                    <img style={{width: "40px"}} src={bni}/>
-                    <h4 className='gilroyBold'>STALWARTS</h4>
-                    <p className="gilroy">(member)</p>
+                    <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "10px", marginTop: "-20px", marginBottom: "20px"}}>
+                    {/* <img style={{width: "60px", margin: "10px 0"}} src={bni}/> */}
+                    
                     </div>
                 </Fade>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "0 0 15px 0"}}>
@@ -133,7 +133,7 @@ export default function Username(props) {
                 {data.userLinks && data.userLinks.map((item, index) => {
                     if (item.id === 1)
                         return (
-                            <div>
+                            <div style={{maxWidth: "1110px", margin: "0 auto"}}>
                                 <div>
                                     <h3 style={{
                                         fontWeight: 'bolder',
@@ -153,15 +153,23 @@ export default function Username(props) {
                                                 <div style={{padding:"15px 0"}}>
                                                     <div className='card--menu'>
                                                         <div>
-                                                            <img src={lin.image} style={{ width: "100%", borderRadius: "23px"}} />
+                                                            <div className="card-image-container">
+                                                            <img src={lin.image} style={{ width: "auto", height: "120px"}} />
+                                                            </div>
                                                         </div>
                                                         <div style={{}} >
-                                                            <p style={{ fontWeight: "600", fontSize: "20px", textAlign: "center" }} className="gilroyBold">
+                                                            <p style={{ fontWeight: "600", fontSize: "20px", textAlign: "center"}} className="gilroyBold">
                                                                 {lin.heading}
                                                             </p>
                                                         </div>
                                                         <p style={{ fontSize: "15px", textAlign: "justify", textJustify: "inter-word" }}>
+                                                        <ReactReadMoreReadLess
+                                                            charLimit={70}
+                                                            readMoreText={<p style={{color:"#7F8487", marginTop: "0px"}}>Read more ▼</p>}
+                                                            readLessText={<p style={{color:"#7F8487", marginTop: "0px"}}>Read less ▲</p>}
+                                                        >
                                                             {lin.description}
+                                                        </ReactReadMoreReadLess> 
                                                         </p>
 
                                                         <button onClick={() => window.open(lin.url, "_blank")} className='btn--dis' style={{cursor: "pointer"}}>
