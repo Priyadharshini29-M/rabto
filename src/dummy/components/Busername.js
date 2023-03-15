@@ -16,6 +16,8 @@ import enterprise from "../../assets/images/enterprise.png"
 import dotlogo from "../../assets/images/dotlogored.png";
 import WhatsappButton from "../../assets/images/WhatsAppButtonGreenSmall.png"
 import {FaPhoneAlt} from "react-icons/fa"
+import ReactRoundedImage from "react-rounded-image";
+
 //tempAssets
 import BusinessLogo from "../../assets/images/download.png"
 import { Container } from '@mui/system';
@@ -34,11 +36,15 @@ export default function Username(props) {
         <Container>
             <div style={{backgroundColor:"#F4F4F4", paddingBottom:"10px", paddingTop: "10px", borderRadius: "7px"}}>
                 <div className='logo--cont'>
-                <img
-                src={dotlogo}
-                className='business-logo'
+                <ReactRoundedImage
+                image={data.userBio.profile}
+                imageWidth="100"
+                imageHeight="100"
+                roundedSize="0"
+                borderRadius="100"
+                />
                 
-            />
+            
                 </div>
             
          
@@ -50,7 +56,7 @@ export default function Username(props) {
         }}
         >
         <h2  className='usernameTxt gilroyBold'>
-        the Dot Tech
+        {data.userBio.name}
         </h2>
         <img
         style={{
@@ -84,7 +90,7 @@ export default function Username(props) {
                     </Fade>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", padding: "15px 0"}}>
                     <div style={{marginRight: "15px"}}>
-                    <a style={{textDecoration: "none"}} href="tel://919845318077">
+                    <a style={{textDecoration: "none"}} href={`tel://${data.userBio.whatsappNumber}`}>
                         <button className='call-btn gilroy' style={{cursor: "pointer"}}>
                         <FaPhoneAlt style={{marginRight: "8px"}} />
                            <div>Call</div> 
@@ -104,12 +110,12 @@ export default function Username(props) {
                             // }}
                             className='usernameSocialIconBox'
                         >
-                            <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='busernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='busernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.behance, "_blank")} src={BehanceIcon} className='busernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.linkedin, "_blank")} src={LinkedInIcon} className='busernameSocialIcon' />
-                            <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='busernameSocialIcon' />
+                            {data.userBio.links.instagram ? <img onClick={() => window.open(data.userBio.links.instagram, "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' /> : null}
+                            {data.userBio.links.fb ? <img onClick={() => window.open(data.userBio.links.fb, "_blank")} src={FaceBookIcon} className='busernameSocialIcon' />: null}
+                            {data.userBio.links.dribble ? <img onClick={() => window.open(data.userBio.links.dribble, "_blank")} src={DribbleIcon} className='busernameSocialIcon' />: null}
+                            {data.userBio.links.behance ? <img onClick={() => window.open(data.userBio.links.behance, "_blank")} src={BehanceIcon} className='busernameSocialIcon' />: null}
+                            {data.userBio.links.linkedin ? <img onClick={() => window.open(data.userBio.links.linkedin, "_blank")} src={LinkedInIcon} className='busernameSocialIcon' />: null}
+                            {data.userBio.links.twitter ? <img onClick={() => window.open(data.userBio.links.twitter, "_blank")} src={TwitterIcon} className='busernameSocialIcon' />: null}
                         </Box>
                         </Slide>
                     </div>
@@ -281,11 +287,11 @@ export default function Username(props) {
                 }
             </div>
             </div>
-            {/* <div className='resumeBtnBox'>
-                <a className='resumeBtn' >
+            <div className='resumeBtnBox'>
+                <a href={data.userBio.brochure_link} className='resumeBtn' download>
                     Download Brochure
                 </a>
-            </div> */}
+            </div> 
         </div>
         </div>
     )
