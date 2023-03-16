@@ -157,8 +157,8 @@ export const buserData = [{
     ]
 }, {
     userBio: {
-        name: "Sudharshan",
-        userName: "sudharshan",
+        name: "Snow Flakes",
+        userName: "snowflakes",
         whatsappNumber: "9500774036",
         position: "Snow Flakes",
         bio: "Founder of Snow Flakes - Pure Organic kids clothing 🍃",
@@ -185,7 +185,18 @@ export const buserData = [{
                 url: "https://www.instagram.com/snowflakes.clothing/",
                 image: "https://firebasestorage.googleapis.com/v0/b/gobyin-static-one.appspot.com/o/user_uploads%2F1cef73bf-7e7b-4c8d-9487-293626d493cf2995d9bb34bca2807b6b8d66b9dc221c%402x.png?alt=media&token=ac88f6c7-1483-4af1-8dcf-84ccf26f6436"
             }]
-        }
+        },
+        
 
+    ],
+    userProductImg: [
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9461.webp?alt=media&token=44ab4887-74f7-4bb5-9b8e-b6e702ae6e02',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9453.webp?alt=media&token=1e681fc7-9b7a-4df3-9e1a-f2bfa6ba087d',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9392.webp?alt=media&token=f6327049-b68e-4349-8c5d-4ddbd01d6817',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9366.webp?alt=media&token=7197337a-106c-40f4-8c71-9e8f6acc546c',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9357.webp?alt=media&token=fd1b504a-1b64-4efe-86c1-a6c565a029bc',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9330.webp?alt=media&token=8b311715-672b-4444-9e2c-6309c757b581',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9280%20(1).webp?alt=media&token=a092a4ff-abec-4171-a4c1-25d7283eb521',
+        'https://firebasestorage.googleapis.com/v0/b/boga-sree.appspot.com/o/goby%2FIMG_9226.webp?alt=media&token=ea6ab408-11bb-4ce2-ae89-bf7bc911de3f',
     ]
 }]
