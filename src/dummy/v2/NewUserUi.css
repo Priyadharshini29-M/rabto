@@ -1,0 +1,8 @@
+.top-cont{
+    background-image: url(../../assets/v2images/cover.png);
+    width: 100%;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}

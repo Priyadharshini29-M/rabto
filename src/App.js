@@ -20,6 +20,7 @@ import PrivateRoute from './dummy/routes/PrivateRoutes';
 import Tools from './dummy/screens/Tools';
 import Company from './dummy/screens/Company';
 import Personal from './dummy/components/Personal';
+import NewUserUi from './dummy/v2/NewUserUi';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/tools" element={<Tools />} />
         <Route path="/thedot_tech" element={<Company />} />
         <Route path="/personal" element={<Personal />} />
+        <Route path="/thedottech" element={<NewUserUi />} /> 
       </Routes>
     </Router>
   );

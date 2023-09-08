@@ -101,6 +101,7 @@
     border: none;
     color: #fff;
     font-size: medium;
+
 }
 .a .call-btn .visited{
     text-decoration: none;
@@ -188,11 +189,16 @@
 
 @font-face {
     font-family: Gilroy;
-    src: url(../../assets/fonts/Gilroy/Gilroy-Light.otf);
+    src: url(../../assets/fonts/gilroy/Gilroy-Regular.ttf);
 }
+
 @font-face {
     font-family: GilroyBold;
-    src: url(../../assets/fonts/Gilroy/Gilroy-ExtraBold.otf);
+    src: url(../../assets/fonts/gilroy/Gilroy-ExtraBold.ttf);
+}
+@font-face {
+    font-family: GilroyNBold;
+    src: url(../../assets/fonts/gilroy/Gilroy-Bold.ttf);
 }
 
 body{
