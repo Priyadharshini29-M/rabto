@@ -171,6 +171,7 @@ export default function Username(props) {
                                         <ScrollMenu style={{
                                             // backgroundColor: '#848484',
                                             display: "flex",
+                                            
                                         }}>
                                             {item.links.map((lin, index) => {
                                                 return (
@@ -184,15 +185,13 @@ export default function Username(props) {
                                                                     {lin.heading}
                                                                 </p>
                                                             </div>
-                                                            <p style={{ fontSize: "15px", textAlign: "justify", textJustify: "inter-word" }}>
-                                                                {lin.description}
+                                                            <p style={{ fontSize: "15px", textAlign: "justify", textJustify: "inter-word", display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+                                                              <span className=''>Category -</span> {lin.description}
                                                             </p>
 
                                                             <button onClick={() => window.open(lin.url, "_blank")} className='btn--dis' style={{cursor: "pointer"}}>
                                                                 DISCOVER
                                                             </button>
-
-
                                                         </div>
                                                     </div>
                                                 )
@@ -337,13 +336,13 @@ export default function Username(props) {
                                 </div>
 
                             )
-                        if (item.title === 'Education')
+                        if (item.id === 2)
                             return (
                                 <div >
                                     <h3 style={{
                                         marginLeft: 20,
                                         fontSize: "23px"
-                                    }}>
+                                    }} className='gilroyBold'>
                                         {item.title}
                                     </h3>
                                     <ScrollMenu style={{
@@ -351,32 +350,9 @@ export default function Username(props) {
                                         marginBottom: 45,
 
                                     }}>
-                                {item.links.map((lin, index) => {
-                                    return(
-                                        <div style={{padding:"15px 0", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
-                                        <div className='card--menu'>
-                                            <p 
-                                                 style={{fontWeight:"600", fontSize:"20px", textAlign:"center"}}
-                                            >
-                                            {lin.institutionName}
-                                            </p>
-                                            <p  style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
-                                            {lin.year}
-                                            </p>
-                                            
-                                            <p  style={{fontWeight:"400", fontSize:"20px", textAlign:"center"}}>
-                                            {lin.grade}
-                                            </p>
-                                            <button onClick={() => window.open(lin.institutionurl, "_blank")} className='btn--dis'>
-                                                DISCOVER
-                                            </button>
-                                            
-                                        </div>
-                                        </div>
-                                    )
-                                }) 
-
-                                }
+                               <video height="500px" width="300">
+                                    <source src="https://www.instagram.com/reel/Csf7m8ft_V8/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" />
+                               </video>
                             </ScrollMenu>    
                         </div>    
                     )

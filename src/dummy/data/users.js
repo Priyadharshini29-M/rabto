@@ -5,7 +5,7 @@ import cbe from "../../assets/images/cbe.webp"
 
 export const buserData = [{
     userBio: {
-        name: "theDot Tech",
+        name: "t",
         userName: "thedottech",
         whatsappNumber: "9845318077",
         position: "CEO @goby.in",
@@ -26,11 +26,11 @@ export const buserData = [{
     },
     userLinks: [{
             id: 1,
-            title: "Social Media Marketing",
+            title: "Websites",
             links: [{
-                    heading: "Bangs",
-                    description: "Elevating A Luxury Beauty Salon's specialised services in Social Media Platform.",
-                    url: "https://instagram.com/bangssalon_rspuram?igshid=YmMyMTA2M2Y=",
+                    heading: "Rudra Cycles",
+                    description: "E-commerce Website",
+                    url: "https://rudracyclemart.in/",
                     image: bangs
                 },
                 {
@@ -52,7 +52,12 @@ export const buserData = [{
                     image: nannir
                 }
             ]
+        },
+        {
+        id: 2,
+            title: "Creative Videos",
         }
+
 
     ]
 }, {
