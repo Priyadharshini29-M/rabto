@@ -16,6 +16,10 @@ import csc from "../../assets/v2images/csc.webp"
 import code from "../../assets/v2images/code.webp"
 import anna from "../../assets/v2images/anna.webp"
 import hworld from "../../assets/v2images/hworld.webp"
+import ryd from "../../assets/v2images/ryd.webp"
+import rk from "../../assets/v2images/rk.webp"
+import dent from "../../assets/v2images/dent.webp"
+import bog from "../../assets/v2images/bog.webp"
 import save from "../../assets/v2images/save.webp"
 
 
@@ -59,72 +63,55 @@ const webData = [
 ]
 const brandData = [
     {
-        image: rudra,
+        image: rk,
+        title: "RK Bakery",
+        description: "Logo Design and Branding",
+        link: "https://www.behance.net/gallery/169409287/RK-BAKERY-LOGO",
+
+    },
+    {
+        image: dent,
+        title: "Archident Oral Care",
+        description: "Logo Design and Branding Visual Identity",
+        link: "https://www.behance.net/gallery/177924265/ARCIDENT-ORAL-CARE",
+
+    },
+    {
+        image: bog,
+        title: "Bogasri Organics",
+        description: "Logo Design , Branding and Package design ",
+        link: "https://www.behance.net/gallery/177613529/BOGASRI-ORGANICS-PACKAGE-DESIGNING",
+
+    },
+    {
+        image: ryd,
         title: "Rudra Cycles",
-        description: "E-commerce website",
-        link: "https://rudracyclemart.in/",
+        description: "Branding and AD design",
+        link: "https://www.behance.net/gallery/177617033/RUDRA-CYCLE-MART",
 
-    },
-    {
-        image: csc,
-        title: "Coimbatore Social Club",
-        description: "Dynamic website",
-        link: "https://thecoimbatoresocialclub.com/",
-
-    },
-    {
-        image: code,
-        title: "Code for Deaf",
-        description: "Dynamic website",
-        link: "https://www.codingfordeaf.org/",
-
-    },
-    {
-        image: anna,
-        title: "Annalakshmi",
-        description: "Dynamic site with reservation module",
-        link: "https://annalakshmi.in",
-
-    },
-    {
-        image: hworld,
-        title: "The H World",
-        description: "E-commerce website",
-        link: "https://thehworld.in/",
-
-    },
+    }
 
 ]
 
 
 export default function NewUserUi() {
-    const name = "Surendhar"
-    const phone = "9845318077"
     const handleClick = () => {
-        // Create a vCard string
-        const vCard = `BEGIN:VCARD
-    VERSION:3.0
-    FN:${name}
-    TEL:${phone}
-    END:VCARD`;
+        // Display instructions for the user
+        alert('To save this contact, please follow these steps:\n\n1. Open your device\'s Contacts/People app.\n2. Tap on the option to add a new contact.\n3. Enter the contact information manually.');
     
-        // Create a Blob with the vCard data
-        const blob = new Blob([vCard], { type: 'text/vcard' });
+        // Optionally, you can also provide a preformatted text
+        const contactText = `Name: [Name]
+    Phone: [Phone]
+    Email: [Email]`;
     
-        // Create a URL for the Blob
-        const url = window.URL.createObjectURL(blob);
-    
-        // Create a download link and simulate a click to trigger download
-        const a = document.createElement('a');
-        a.style.display = 'none';
-        a.href = url;
-        a.download = `${name}.vcf`;
-        document.body.appendChild(a);
-        a.click();
-    
-        // Clean up
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
+        // Copy the preformatted text to the clipboard (if supported)
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(contactText).then(() => {
+            alert('Contact information copied to clipboard. You can paste it while adding a new contact.');
+          }).catch((error) => {
+            console.error('Failed to copy to clipboard:', error);
+          });
+        }
       };
     return(
         <div>
@@ -133,8 +120,8 @@ export default function NewUserUi() {
             <div>
                 <div className="prof">
                 <img className="prof-img" src={suren} />
-                <div onClick={handleClick} style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
-                <img src={save} style={{ width: "23px", padding: "8px"}}/> 
+                <div style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
+                <img src={save} onClick={handleClick} style={{ width: "23px", padding: "8px"}}/> 
                 </div>
                 <div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
