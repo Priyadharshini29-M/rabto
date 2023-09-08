@@ -120,9 +120,9 @@ export default function NewUserUi() {
             <div>
                 <div className="prof">
                 <img className="prof-img" src={suren} />
-                <div style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
+                {/* <div style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
                 <img src={save} onClick={handleClick} style={{ width: "23px", padding: "8px"}}/> 
-                </div>
+                </div> */}
                 <div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                         <h2 className="NeuExBlack">Warren Peace</h2>
