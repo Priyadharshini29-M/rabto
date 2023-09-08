@@ -1,8 +1,109 @@
+/* fonts  */
+
+@font-face {
+    font-family: NeuExBlack;
+    src: url(../../assets/fonts/neue/Neue\ Plak\ Extended\ Black.ttf);
+}
+
+.NeuExBlack{
+    font-family: NeuExBlack;
+}
+
+
 .top-cont{
-    background-image: url(../../assets/v2images/cover.png);
+    background-image: url(../../assets/v2images/cover.webp);
     width: 100%;
     height: 20vh;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    top: 0;
+    position: sticky;
+    z-index: -20;
+}
+
+.prof-img{
+    width: 100px;
+    margin-top: -50px;
+    z-index: 80;
+    border-radius: 180px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.prof{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F4F4F4;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-top: -27px;
+}
+
+.phone-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 37px;
+    border-radius: 15px;
+    border: 2px solid #162449;
+    background-color: #ffffff;
+    gap: 7px;
+    font-size: small;
+    max-width: 150px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.wa-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 37px;
+    border-radius: 15px;
+    border: none;
+    background-image: linear-gradient(to left, #67D75C, #86E678);
+    gap: 7px;
+    font-size: smaller;
+    color: #ffffff;
+    max-width: 150px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 10px;
+}
+
+.vt-cardmain{
+    width: 160px;
+    height: 235px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.vt-img{
+    width: 100%;
+    
+}
+
+
+.disbtn{
+    width: 100%;
+    border-radius: 20px;
+    padding: 9px 0;
+    border: none;
+    background-color: #F4F4F4;
+    color: #162449;
+
+
 }
