@@ -98,20 +98,33 @@ const brandData = [
 
 
 export default function NewUserUi() {
+    const name = "Surendhar"
+    const phone = "9845318077"
     const handleClick = () => {
-        if ('contacts' in navigator) {
-          navigator.contacts.save({
-            name: "Surendhar BNI Stalwarts",
-            phoneNumbers: "9845318077"
-          }).then(() => {
-            alert('Contact saved successfully!');
-          }).catch((error) => {
-            console.error(error);
-            alert('Failed to save contact.');
-          });
-        } else {
-          alert('Your browser does not support this feature.');
-        }
+        // Create a vCard string
+        const vCard = `BEGIN:VCARD
+    VERSION:3.0
+    FN:${name}
+    TEL:${phone}
+    END:VCARD`;
+    
+        // Create a Blob with the vCard data
+        const blob = new Blob([vCard], { type: 'text/vcard' });
+    
+        // Create a URL for the Blob
+        const url = window.URL.createObjectURL(blob);
+    
+        // Create a download link and simulate a click to trigger download
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `${name}.vcf`;
+        document.body.appendChild(a);
+        a.click();
+    
+        // Clean up
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
       };
     return(
         <div>
