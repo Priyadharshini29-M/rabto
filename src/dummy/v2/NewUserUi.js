@@ -16,6 +16,7 @@ import csc from "../../assets/v2images/csc.webp"
 import code from "../../assets/v2images/code.webp"
 import anna from "../../assets/v2images/anna.webp"
 import hworld from "../../assets/v2images/hworld.webp"
+import save from "../../assets/v2images/save.webp"
 
 
 const webData = [
@@ -30,28 +31,66 @@ const webData = [
         image: csc,
         title: "Coimbatore Social Club",
         description: "Dynamic website",
-        link: "https://rudracyclemart.in/",
+        link: "https://thecoimbatoresocialclub.com/",
 
     },
     {
         image: code,
         title: "Code for Deaf",
         description: "Dynamic website",
-        link: "https://rudracyclemart.in/",
+        link: "https://www.codingfordeaf.org/",
 
     },
     {
         image: anna,
         title: "Annalakshmi",
         description: "Dynamic site with reservation module",
-        link: "https://rudracyclemart.in/",
+        link: "https://annalakshmi.in",
 
     },
     {
         image: hworld,
         title: "The H World",
         description: "E-commerce website",
+        link: "https://thehworld.in/",
+
+    },
+
+]
+const brandData = [
+    {
+        image: rudra,
+        title: "Rudra Cycles",
+        description: "E-commerce website",
         link: "https://rudracyclemart.in/",
+
+    },
+    {
+        image: csc,
+        title: "Coimbatore Social Club",
+        description: "Dynamic website",
+        link: "https://thecoimbatoresocialclub.com/",
+
+    },
+    {
+        image: code,
+        title: "Code for Deaf",
+        description: "Dynamic website",
+        link: "https://www.codingfordeaf.org/",
+
+    },
+    {
+        image: anna,
+        title: "Annalakshmi",
+        description: "Dynamic site with reservation module",
+        link: "https://annalakshmi.in",
+
+    },
+    {
+        image: hworld,
+        title: "The H World",
+        description: "E-commerce website",
+        link: "https://thehworld.in/",
 
     },
 
@@ -59,6 +98,21 @@ const webData = [
 
 
 export default function NewUserUi() {
+    const handleClick = () => {
+        if ('contacts' in navigator) {
+          navigator.contacts.save({
+            name: "Surendhar BNI Stalwarts",
+            phoneNumbers: "9845318077"
+          }).then(() => {
+            alert('Contact saved successfully!');
+          }).catch((error) => {
+            console.error(error);
+            alert('Failed to save contact.');
+          });
+        } else {
+          alert('Your browser does not support this feature.');
+        }
+      };
     return(
         <div>
         <div style={{maxWidth: "912px", margin: "0 auto"}}>
@@ -66,6 +120,9 @@ export default function NewUserUi() {
             <div>
                 <div className="prof">
                 <img className="prof-img" src={suren} />
+                <div onClick={handleClick} style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
+                <img src={save} style={{ width: "23px", padding: "8px"}}/> 
+                </div>
                 <div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                         <h2 className="NeuExBlack">Warren Peace</h2>
@@ -78,7 +135,7 @@ export default function NewUserUi() {
                         />
                     </div>
                     <div>
-                        <h4 style={{textAlign: "center", marginTop: "0", padding: "5px 10px"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
+                        <h4 className="GilroyBoldT" style={{textAlign: "center", marginTop: "0", padding: "5px 10px", color: "#3E4152"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
                     </div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px"}}>
                         <img onClick={() => window.open("https://www.instagram.com/thedot_tech/", "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' />
@@ -92,20 +149,36 @@ export default function NewUserUi() {
                 </div>
                 <div style={{backgroundColor: "#ffffff"}}>
                     <div className="btn-cont">
-                        <button className="phone-btn"><img src={call} style={{width: "13px"}} />CALL</button>
-                        <button className="wa-btn"><img src={whatsapp} style={{width: "15px"}} />WHATSAPP</button>
+                    <a style={{textDecoration: "none"}} href={`tel://9845318077`}><button className="phone-btn NeuExBlack"><img src={call} style={{width: "13px"}} />CALL</button></a>
+                    <a style={{textDecoration: "none"}}  aria-label="Chat on WhatsApp" href={`https://wa.me/919845318077`} > <button className="wa-btn NeuExBlack"><img src={whatsapp} style={{width: "15px"}} />WHATSAPP</button></a>
                     </div>
                     <div>
-                        <h2>Websites</h2>
+                        <h2 className="NeuExBlack" style={{textAlign: "center"}}>Works & Portfolios</h2>
+                        <h3 className="NeuExBlack" style={{marginLeft: "15px", marginTop: "35px"}}>WEBSITE</h3>
                         <ScrollMenu>
                             {webData.map((webd, index) => (
                                 <div className="vt-cardmain" key={index}>
                                 <img src={webd.image} className="vt-img" /> 
                                 <div className="vt-content">
-                                    <h3>{webd.title}</h3>
-                                    <h5>{webd.description}</h5>
+                                    <h3 style={{color:"#162449"}} className="GilroyBoldT">{webd.title}</h3>
+                                    <h5 style={{color:"#3E4152"}} className="GilroyMedT">{webd.description}</h5>
                                 </div>
-                                <button className="disbtn" onClick={() => window.open(webd.link, "_blank")}>
+                                <button className="disbtn GilroyBoldT" style={{color: "#162449"}} onClick={() => window.open(webd.link, "_blank")}>
+                                    Discover
+                                </button>
+                            </div>
+                            ))}
+                        </ScrollMenu>
+                        <h3 className="NeuExBlack" style={{marginLeft: "15px", marginTop: "35px"}}>BRANDING & PACKAGING</h3>
+                        <ScrollMenu>
+                            {brandData.map((brand, index) => (
+                                <div className="vt-cardmain" key={index}>
+                                <img src={brand.image} className="vt-img" /> 
+                                <div className="vt-content">
+                                    <h3 style={{color:"#162449"}} className="GilroyBoldT">{brand.title}</h3>
+                                    <h5 style={{color:"#3E4152"}} className="GilroyMedT">{brand.description}</h5>
+                                </div>
+                                <button className="disbtn GilroyBoldT" style={{color: "#162449"}} onClick={() => window.open(brand.link, "_blank")}>
                                     Discover
                                 </button>
                             </div>

@@ -9,6 +9,21 @@
     font-family: NeuExBlack;
 }
 
+@font-face {
+    font-family: GilroyBoldT;
+    src: url(../../assets/fonts/gilroy/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: GilroyMedT;
+    src: url(../../assets/fonts/gilroy/Gilroy-Medium.ttf);
+}
+.GilroyBoldT{
+    font-family: GilroyBoldT;
+}
+.GilroyMedT{
+    font-family: GilroyMedT;
+}
 
 .top-cont{
     background-image: url(../../assets/v2images/cover.webp);
@@ -106,4 +121,16 @@
     color: #162449;
 
 
+}
+
+.save-btn{
+    border-radius: 2000px;
+    width: 45px;
+    height: 45px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 10px;
 }
