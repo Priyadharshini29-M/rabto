@@ -121,7 +121,7 @@ export default function NewUserUi() {
                 <div className="prof">
                 <img className="prof-img" src={suren} />
                 <div style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
-                <a href="intent:insert?name=Surendhar%20BNI(Stalwarts)&phone=9845318077">
+                <a href="intent:insert?name=Surendhar%20Stalwarts&phone=9845318077">
 
                 <img src={save} style={{ width: "23px", padding: "8px"}}/> 
                 </a>
