@@ -18,9 +18,20 @@
     font-family: GilroyMedT;
     src: url(../../assets/fonts/gilroy/Gilroy-Medium.ttf);
 }
+
+@font-face {
+    font-family: MontserratEBold;
+    src: url(../../assets/fonts/montserrat/Montserrat-ExtraBold.ttf);
+}
+
+.MontserratEBold{
+    font-family: MontserratEBold;
+}
+
 .GilroyBoldT{
     font-family: GilroyBoldT;
 }
+
 .GilroyMedT{
     font-family: GilroyMedT;
 }
@@ -94,7 +105,7 @@
 }
 
 .vt-cardmain{
-    width: 160px;
+    width: 200px;
     height: 260px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     padding: 10px;
@@ -134,3 +145,4 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 10px;
 }
+

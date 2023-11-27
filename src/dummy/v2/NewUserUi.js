@@ -21,6 +21,40 @@ import rk from "../../assets/v2images/rk.webp"
 import dent from "../../assets/v2images/dent.webp"
 import bog from "../../assets/v2images/bog.webp"
 import save from "../../assets/v2images/save.webp"
+import { Button, Popover, Space } from 'antd';
+import scan from '../assets/logos/scan.png';
+import scanner from '../assets/logos/scanner.png';
+import footerlogo from "../assets/logos/footer.png"
+
+const Contact = () => {
+    const handleSaveContact = () => {
+      // Create a vCard content
+      const vCardContent = `BEGIN:VCARD
+  VERSION:3.0
+  FN:Suren
+  TEL:9845211201
+  END:VCARD`;
+  
+      // Create a Blob with the vCard content
+      const blob = new Blob([vCardContent], { type: 'text/vcard' });
+  
+      // Create a download link and trigger the click event
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = 'SurenContact.vcf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  
+    return (
+      <div>
+        {/* Button to trigger saving contact */}
+        <button onClick={handleSaveContact}>Save Contact</button>
+      </div>
+    );
+  };
+  
 
 
 const webData = [
@@ -95,6 +129,12 @@ const brandData = [
 
 
 export default function NewUserUi() {
+
+    const content = (
+    <div style={{width: "250px"}}>
+        <img src={scanner} style={{width: "100%"}} />
+    </div>
+    );
     const handleClick = () => {
         // Display instructions for the user
         alert('To save this contact, please follow these steps:\n\n1. Open your device\'s Contacts/People app.\n2. Tap on the option to add a new contact.\n3. Enter the contact information manually.');
@@ -118,6 +158,11 @@ export default function NewUserUi() {
         <div style={{maxWidth: "912px", margin: "0 auto"}}>
             <div className="top-cont" />
             <div>
+                <Popover style={{position: "fixed"}} content={content} trigger="click">
+                    <div style={{position: "fixed", bottom: "10px", right: "10px", backgroundColor: "#162449", borderRadius: "50px", height: "35px", width: "35px", display: "flex", justifyContent: "center", alignItems: "center", padding: "10px", zIndex: "50"}}>
+                        <img src={scan} style={{width: "25px", height: "25px"}} />
+                    </div>
+                </Popover>
                 <div className="prof">
                 <img className="prof-img" src={suren} />
                 {/* <div style={{alignSelf: "end", marginTop: "-40px",}} className="save-btn">
@@ -128,7 +173,7 @@ export default function NewUserUi() {
                 </div> */}
                 <div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <h2 className="NeuExBlack">Warren Peace</h2>
+                        <h2 className="MontserratEBold">Surendhar</h2>
                         <img
                         style={{
                             height:23,
@@ -146,7 +191,7 @@ export default function NewUserUi() {
                         <img onClick={() => window.open("https://dribbble.com/surintherraja", "_blank")} src={DribbleIcon} style={{}} className='busernameSocialIcon' />
                         <img onClick={() => window.open("https://www.behance.net/warrenpeaceweb", "_blank")} src={BehanceIcon} style={{}} className='busernameSocialIcon' />
                         <img onClick={() => window.open("https://www.linkedin.com/in/surinther-raja-s-7370b1125/", "_blank")} src={LinkedInIcon} style={{}} className='busernameSocialIcon' />
-                        <img onClick={() => window.open("https://twitter.com/theDot_tech", "_blank")} src={TwitterIcon} style={{}} className='busernameSocialIcon' />
+                        <img onClick={() => window.open("https://thedottech.in", "_blank")} src={TwitterIcon} style={{}} className='busernameSocialIcon' />
                     </div>
                 </div>
                 </div>
@@ -191,6 +236,10 @@ export default function NewUserUi() {
                 </div>
             </div>
         </div>
+        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+            <img src={footerlogo} style={{width: "15%", padding: "20px 0"}} />
+        </div>
+        <Contact />
         </div>
     )
 }
