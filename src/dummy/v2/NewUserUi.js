@@ -212,7 +212,7 @@ export default function NewUserUi() {
                         <img src={savebtn} onClick={handleSaveClick} style={{marginLeft: "3px"}} />
                     </div>
                     <div>
-                        <h4 className="GilroyBoldT" style={{textAlign: "center", marginTop: "0", padding: "5px 10px", color: "#3E4152"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
+                        <h4 className="GilroyBoldT" style={{textAlign: "center", padding: "5px 10px", color: "#3E4152"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
                     </div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px"}}>
                         <img onClick={() => window.open("https://www.instagram.com/thedot_tech/", "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' />
