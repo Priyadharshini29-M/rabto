@@ -26,7 +26,7 @@ import scan from '../assets/logos/scan.png';
 import scanner from '../assets/logos/scanner.png';
 import footerlogo from "../assets/logos/footer.png";
 import savebtn from "../assets/logos/save.png";
-import td from "../assets/logos/td.mp4"
+import td from "../assets/logos/td.webm"
 
 
 
@@ -155,7 +155,7 @@ export default function NewUserUi() {
           });
         }
       };
-      const words = ['Branding', 'Web Design & Development', 'Creatives & Strategy', 'Digital & Performance Marketing', 'Custom Softwares', 'Mobile App Development'];
+      const words = ['Branding', 'Web Design & Development', 'Creatives & Strategy', 'Digital Marketing', 'Custom Softwares', 'Mobile App Development'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [typedText, setTypedText] = useState('');
 
@@ -182,7 +182,7 @@ export default function NewUserUi() {
         <div style={{maxWidth: "912px", margin: "0 auto"}}>
             <div className="top-cont">
                 <video style={{width: "100%"}} controls={false} autoPlay={true} muted loop >
-                    <source src={td} type="video/mp4"/>
+                    <source src={td} type="video/webm"/>
                 </video>
             </div>
             <div>
@@ -229,7 +229,7 @@ export default function NewUserUi() {
                     <a style={{textDecoration: "none"}} href={`tel://9845318077`}><button className="phone-btn NeuExBlack"><img src={call} style={{width: "13px"}} /><span style={{marginBottom: "0px"}}>Call</span></button></a>
                     <a style={{textDecoration: "none"}}  aria-label="Chat on WhatsApp" href={`https://wa.me/919845318077`} > <button className="wa-btn NeuExBlack"><img src={whatsapp} style={{width: "15px"}} /><span style={{marginBottom: "0px"}}>WhatsApp</span></button></a>
                     </div>
-                    <div className="typing-animation-container">
+                    <div className="typing-animation-container" style={{margin: "30px 0"}}>
       <p style={{fontSize: "small"}} className="MontserratR">We are seasoned in</p>
       <p>
         <span className="highlight MontserratEBold">{typedText}</span>
