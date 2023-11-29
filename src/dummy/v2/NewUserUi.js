@@ -149,7 +149,7 @@ export default function NewUserUi() {
         // Copy the preformatted text to the clipboard (if supported)
         if (navigator.clipboard) {
           navigator.clipboard.writeText(contactText).then(() => {
-            alert('Contact information copied to clipboard. You can paste it while adding a new contact.');
+            alert('Contact information copied to clipboard. You can paste it while adding a contact');
           }).catch((error) => {
             console.error('Failed to copy to clipboard:', error);
           });
