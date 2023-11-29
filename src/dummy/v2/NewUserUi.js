@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./NewUserUi.css";
 import suren from "../../assets/v2images/suren.webp";
 import LogoIcon from '../assets/logos/verified.svg';
@@ -24,37 +24,10 @@ import save from "../../assets/v2images/save.webp"
 import { Button, Popover, Space } from 'antd';
 import scan from '../assets/logos/scan.png';
 import scanner from '../assets/logos/scanner.png';
-import footerlogo from "../assets/logos/footer.png"
+import footerlogo from "../assets/logos/footer.png";
+import savebtn from "../assets/logos/save.png";
+import td from "../assets/logos/td.mp4"
 
-const Contact = () => {
-    const handleSaveContact = () => {
-      // Create a vCard content
-      const vCardContent = `BEGIN:VCARD
-  VERSION:3.0
-  FN:Suren
-  TEL:9845211201
-  END:VCARD`;
-  
-      // Create a Blob with the vCard content
-      const blob = new Blob([vCardContent], { type: 'text/vcard' });
-  
-      // Create a download link and trigger the click event
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = 'SurenContact.vcf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
-  
-    return (
-      <div>
-        {/* Button to trigger saving contact */}
-        <button onClick={handleSaveContact}>Save Contact</button>
-      </div>
-    );
-  };
-  
 
 
 const webData = [
@@ -129,6 +102,35 @@ const brandData = [
 
 
 export default function NewUserUi() {
+    const handleSaveClick = () => {
+
+        // Get the contact information
+        const contact = {
+          name: "Surendhar BNI Stalwarts",
+          phone: "+91 9845318077",
+          email: "team@thedottech.in"
+        };
+    
+        // Create vCard content
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${contact.name}\nTEL;TYPE=work,voice:${contact.phone}\nEMAIL:${contact.email}\nEND:VCARD`;
+        
+        // Create Blob object
+        const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+    
+        // Create URL for the Blob
+        const url = URL.createObjectURL(blob);
+    
+        // Create a link element
+        const link = document.createElement('a');
+    
+        // Set attributes for the link
+        link.download = `${contact.name}.vcf`;
+        link.href = url;
+    
+        // Simulate a click on the link to trigger the download
+        link.click();
+      };
+    
 
     const content = (
     <div style={{width: "250px"}}>
@@ -153,10 +155,36 @@ export default function NewUserUi() {
           });
         }
       };
+      const words = ['Branding', 'Web Design & Development', 'Creatives & Strategy', 'Digital & Performance Marketing', 'Custom Softwares', 'Mobile App Development'];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [typedText, setTypedText] = useState('');
+
+  useEffect(() => {
+    let timeout;
+
+    if (typedText.length < words[currentWordIndex].length) {
+      timeout = setTimeout(() => {
+        setTypedText((prevText) => prevText + words[currentWordIndex][typedText.length]);
+      }, 50); // Adjust the timeout value as needed
+    } else {
+      timeout = setTimeout(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+        setTypedText('');
+      }, 1500); // Adjust the timeout value as needed
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentWordIndex, typedText, words]);
+
+    
     return(
         <div>
         <div style={{maxWidth: "912px", margin: "0 auto"}}>
-            <div className="top-cont" />
+            <div className="top-cont">
+                <video style={{width: "100%"}} controls={false} autoPlay={true} muted loop >
+                    <source src={td} type="video/mp4"/>
+                </video>
+            </div>
             <div>
                 <Popover style={{position: "fixed"}} content={content} trigger="click">
                     <div style={{position: "fixed", bottom: "10px", right: "10px", backgroundColor: "#162449", borderRadius: "50px", height: "35px", width: "35px", display: "flex", justifyContent: "center", alignItems: "center", padding: "10px", zIndex: "50"}}>
@@ -181,6 +209,7 @@ export default function NewUserUi() {
                         }}
                         src={LogoIcon}
                         />
+                        <img src={savebtn} onClick={handleSaveClick} style={{marginLeft: "3px"}} />
                     </div>
                     <div>
                         <h4 className="GilroyBoldT" style={{textAlign: "center", marginTop: "0", padding: "5px 10px", color: "#3E4152"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
@@ -197,9 +226,16 @@ export default function NewUserUi() {
                 </div>
                 <div style={{backgroundColor: "#ffffff"}}>
                     <div className="btn-cont">
-                    <a style={{textDecoration: "none"}} href={`tel://9845318077`}><button className="phone-btn NeuExBlack"><img src={call} style={{width: "13px"}} />CALL</button></a>
-                    <a style={{textDecoration: "none"}}  aria-label="Chat on WhatsApp" href={`https://wa.me/919845318077`} > <button className="wa-btn NeuExBlack"><img src={whatsapp} style={{width: "15px"}} />WHATSAPP</button></a>
+                    <a style={{textDecoration: "none"}} href={`tel://9845318077`}><button className="phone-btn NeuExBlack"><img src={call} style={{width: "13px"}} /><span style={{marginBottom: "0px"}}>Call</span></button></a>
+                    <a style={{textDecoration: "none"}}  aria-label="Chat on WhatsApp" href={`https://wa.me/919845318077`} > <button className="wa-btn NeuExBlack"><img src={whatsapp} style={{width: "15px"}} /><span style={{marginBottom: "0px"}}>WhatsApp</span></button></a>
                     </div>
+                    <div className="typing-animation-container">
+      <p style={{fontSize: "small"}} className="MontserratR">We are seasoned in</p>
+      <p>
+        <span className="highlight MontserratEBold">{typedText}</span>
+        {<span className="cursor" >|</span>}
+      </p>
+    </div>
                     <div>
                         <h2 className="NeuExBlack" style={{textAlign: "center"}}>Works & Portfolios</h2>
                         <h3 className="NeuExBlack" style={{marginLeft: "15px", marginTop: "35px"}}>WEBSITE</h3>
@@ -239,7 +275,6 @@ export default function NewUserUi() {
         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
             <img src={footerlogo} style={{width: "15%", padding: "20px 0"}} />
         </div>
-        <Contact />
         </div>
     )
 }
