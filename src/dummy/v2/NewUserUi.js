@@ -26,7 +26,9 @@ import scan from '../assets/logos/scan.png';
 import scanner from '../assets/logos/scanner.png';
 import footerlogo from "../assets/logos/footer.png";
 import savebtn from "../assets/logos/save.png";
-import td from "../assets/logos/td.webm"
+import td from "../assets/logos/td.webm";
+import cover from '../../assets/v2images/cover.webp'
+import { Tooltip, Zoom } from "@mui/material";
 
 
 
@@ -175,15 +177,23 @@ export default function NewUserUi() {
 
     return () => clearTimeout(timeout);
   }, [currentWordIndex, typedText, words]);
-
+    const [videoError, setvideoError] = useState(false);
+    const handleVideoError = () => {
+        setvideoError(true)
+    } 
     
     return(
         <div>
-        <div style={{maxWidth: "912px", margin: "0 auto"}}>
+        <div style={{maxWidth: "768px", margin: "0 auto"}}>
             <div className="top-cont">
-                <video style={{width: "100%"}} controls={false} autoPlay={true} muted loop >
+                {videoError ? (
+                    <div style={{backgroundColor: "#E82A34", width: "100%", height: "300px"}} />
+                ) : (
+                    <video style={{width: "100%"}} controls={false} autoPlay={true} muted loop onError={handleVideoError} onLoad={handleVideoError} >
                     <source src={td} type="video/webm"/>
-                </video>
+                    </video>
+                )}
+                
             </div>
             <div>
                 <Popover style={{position: "fixed"}} content={content} trigger="click">
@@ -209,10 +219,13 @@ export default function NewUserUi() {
                         }}
                         src={LogoIcon}
                         />
+                        
+                        <Tooltip TransitionComponent={Zoom} title="Save Contact" placement='right-start'>
                         <img src={savebtn} onClick={handleSaveClick} style={{marginLeft: "3px"}} />
+                        </Tooltip>
                     </div>
                     <div>
-                        <h4 className="GilroyBoldT" style={{textAlign: "center", padding: "5px 10px", color: "#3E4152"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
+                        <h4 className="GilroyBoldT" style={{textAlign: "center", padding: "5px 10px", color: "#3E4152", marginTop: "0"}}>Loud Introvert with big mission Fiercely local but available worldwide</h4>
                     </div>
                     <div style={{display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "20px"}}>
                         <img onClick={() => window.open("https://www.instagram.com/thedot_tech/", "_blank")} src={InstagramIcon} style={{}} className='busernameSocialIcon' />
@@ -273,7 +286,7 @@ export default function NewUserUi() {
             </div>
         </div>
         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-            <img src={footerlogo} style={{width: "15%", padding: "20px 0"}} />
+            <img src={footerlogo} style={{width: "15%", maxWidth: "50px", padding: "20px 0"}} />
         </div>
         </div>
     )

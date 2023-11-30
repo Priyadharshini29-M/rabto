@@ -79,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 37px;
+    padding: 8px 37px;
     border-radius: 15px;
     border: 2px solid #162449;
     background-color: #ffffff;
@@ -94,7 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 37px;
+    padding: 9px 37px;
     border-radius: 15px;
     border: none;
     background-image: linear-gradient(to left, #67D75C, #86E678);
