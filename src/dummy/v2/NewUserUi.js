@@ -189,7 +189,7 @@ export default function NewUserUi() {
                 {videoError ? (
                     <div style={{backgroundColor: "#E82A34", width: "100%", height: "300px"}} />
                 ) : (
-                    <video style={{width: "100%"}} controls={false} autoPlay={true} muted loop onError={handleVideoError} onLoad={handleVideoError} >
+                    <video style={{width: "100%"}} controls={false} autoPlay={true} muted loop onError={handleVideoError} onLoad={handleVideoError} playsInline>
                     <source src={td} type="video/webm"/>
                     </video>
                 )}
